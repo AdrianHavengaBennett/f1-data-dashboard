@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2006")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2007")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2008")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -108,7 +108,7 @@ $(document).ready(function() {
 
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2009")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -133,7 +133,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2010")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -158,7 +158,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2011")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -185,7 +185,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2012")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -212,7 +212,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2013")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -238,7 +238,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2014")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -266,7 +266,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2015")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -293,7 +293,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2016")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -321,7 +321,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2017")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
@@ -347,7 +347,7 @@ $(document).ready(function() {
     
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-48%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
       console.log(say_hello("2018")); 
     } else {
       $(".specific-bg-color").css("position", "unset");
