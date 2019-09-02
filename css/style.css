@@ -1,0 +1,435 @@
+/*-----------------------------------------------------------Font*/
+
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap:100,200,300,400,500,600,700');
+
+/*-----------------------------------------------------------General*/
+
+div.fullsize {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+div.dc-chart { 
+  float: none !important; 
+}
+
+.header-wrapper {
+  height: 100px;
+}
+
+#header {
+  position: fixed;
+  z-index: 1;
+  background-color: #3D3D3D;
+  height: 100px;
+  width: 100%;
+}
+
+.header-content {
+  display: inline-block;
+}
+
+#title-heading {
+  text-decoration: none;
+}
+
+section {
+  display: block;
+  position: relative;
+}
+
+.col {
+  width: 100%;
+}
+
+.leaflet-container {
+  background-color:#c5e8ff;
+}
+
+/*-----------------------------------------------------------Buttons*/
+
+.nav-buttons {
+  display: none;
+  position: fixed;
+  left: -62px;
+  z-index: 2;
+  padding-right: 8px;
+}
+
+#nav-toggle {
+  position: absolute;
+  border-radius: 15px;
+  left: 0.5em;
+  top: 1.5em;
+  margin: 0.5em;
+  background-color: #D6D6D6;
+}
+
+.btn {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.all-color {
+  color: #D6D6D6;
+  box-shadow: 5px 3px 5px black;
+  width: fit-content;
+  background-color: #5B8F09;
+  margin-left: 63px;
+}
+
+.all-color:hover {
+  background-color: #5B8309;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
+.renault-color {
+  margin-left: 63px;
+  box-shadow: 5px 3px 5px black;
+  width: fit-content;
+  background-color: #00AEFF;
+}
+
+.renault-color:hover {
+  background-color: #008EFF;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
+.ferrari-color {
+  margin-left: 63px;
+  box-shadow: 5px 3px 5px black;
+  width: fit-content;
+  background-color: #DB3535;
+}
+
+.ferrari-color:hover {
+  background-color: #B53535;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
+.brawn-color {
+  margin-left: 63px;
+  box-shadow: 5px 3px 5px black;
+  width: fit-content;
+  background-color: #FFFFFF;
+}
+
+.brawn-color:hover {
+  background-color: #F0F0F0;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
+.rbr-color {
+  margin-left: 63px;
+  box-shadow: 5px 3px 5px black;
+  width: fit-content;
+  background-color: #2569A1;
+}
+
+.rbr-color:hover {
+  background-color: #2559A1;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
+.mercedes-color {
+  margin-left: 63px;
+  box-shadow: 5px 3px 5px black;
+  width: fit-content;
+  background-color: #00C9C6;
+}
+
+.mercedes-color:hover {
+  background-color: #00A9C6;
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
+/*-----------------------------------------------------------Sections*/
+
+.section-bg, .section-bg-pie {
+  display: inline-block;
+  left: 0%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.section-container-pie {
+  height: 100%;
+}
+
+.section-heading {
+  text-align: left;
+  font-family: "Lora", sans-serif;
+  font-size: 20px;
+  color: #DB3535;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.specific-section-heading {
+  text-align: left;
+  font-family: "Lora", sans-serif;
+  font-size: 20px;
+  color: #DB3535;
+  padding: 16px;
+}
+
+.section-overlay {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.1), rgba(255,255,255,0.1)
+  ); 
+  height: 30em;
+}
+
+.pie-section-overlay {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.1), rgba(255,255,255,0.1)
+  ); 
+  height: 20em;
+}
+
+.specific-section-bg {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.speed-demon-bg {
+  height: 200px;
+}
+
+.specific-section-overlay {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.2), rgba(255,255,255,0.1)
+  ); 
+}
+
+.speed-demon-overlay {
+  height: 200px;
+}
+
+#bg-color {
+  display: inline-block;
+  position: absolute;
+  background-image: linear-gradient(
+    #3D3D3D, white
+  );
+  height: 90em;
+  z-index: -1;
+}
+
+.specific-bg-color {
+  position: absolute;
+  background-image: linear-gradient( #DADADA, white );
+  height: 100%;
+  width: 100%;
+  right: 0px;
+  top: 0;
+  z-index: -1;
+}
+
+#title_1, #title_2 {
+  color: #D6D6D6;
+  font-family: "Lora", sans-serif;
+}
+
+#title_1 {
+  font-size: 30px;
+  padding-top: 12px;
+}
+
+#title_2 {
+  font-size: 26px;
+  padding-bottom: 12px;
+}
+
+#map {
+  box-shadow: 5px 3px 5px black;
+  display: inline-block;
+  width: 94%;
+  height: 350px;
+  z-index: 0;
+}
+
+#wins-pie {
+  padding-left: 1.5em;
+}
+
+#wins-pie svg {
+  margin-left: -25px;
+}
+
+#poles-pie {
+  padding-left: 1.5em;
+}
+
+#poles-pie svg {
+  margin-left: -25px;
+}
+
+#fast-laps-pie {
+  padding-left: 1.5em;
+}
+
+#fast-laps-pie svg {
+  margin-left: -25px;
+}
+
+.movers-losers {
+  font-family: "Lora", sans-serif;
+  width: 100%;
+}
+
+#season-speed-demon {
+  padding-bottom: 1.5em;
+}
+
+#sd-quali {
+  margin-left: 0;
+  padding-bottom: 1em;
+}
+
+#sd-fast-laps {
+  margin-left: 0;
+  padding-bottom: 1em;
+}
+
+table {
+  width: inherit;
+}
+
+.stacked-chart {
+  width: 100%;
+}
+
+#all-constructor-points {
+  width: 100%;
+  margin: auto;
+}
+
+.gold i {
+  color: #E0C31B;
+}
+
+.silver i {
+  color: #b5b5b5;
+}
+
+.bronze i {
+  color: #A15D33;
+}
+
+/*-----------------------------------------------------------Media Queries*/
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .dc-chart {
+    margin-left: 25px;
+  }
+  #wins-pie {
+    padding-left: 0;
+  }
+  #poles-pie {
+    padding-left: 0;
+  }
+  #fast-laps-pie {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .dc-chart {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 767px) {
+  .dc-chart {
+    margin-left: 33px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #wins-pie {
+    padding-left: 1.5em;
+  }
+  #poles-pie {
+    padding-left: 1.5em;
+  }
+  #fast-laps-pie {
+    padding-left: 1.5em;
+  }
+  #wins-pie svg {
+    margin-left: -25px;
+  }
+  #poles-pie svg {
+    margin-left: -25px;
+  }
+  #fast-laps-pie svg {
+    margin-left: -25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .specific-bg-color {
+    display: inline-block;
+    position: absolute !important;
+    width: 50%;
+  }
+  .specific-section-overlay {
+    height: 475px;
+  }
+  .speed-demon-bg {
+    height: 475px;
+  }
+  section {
+    margin: 0 auto;
+    max-width: 60%;
+  }
+  .all-color {
+    margin-left: 3.87em;
+  }
+  .nav-buttons {
+    position: absolute;
+    display: block !important;
+    left: -124px;
+  }
+  #header {
+    position: absolute;
+    z-index: 0;
+  }
+  #wins-pie {
+    padding-left: 1.5em;
+  }
+  #poles-pie {
+    padding-left: 1.5em;
+  }
+  #fast-laps-pie {
+    padding-left: 1.5em;
+  }
+}

@@ -31,8 +31,145 @@
     
 </head>
 <body>
-    
-    <p>Hello, World!</p>
+  <div class="header-wrapper">
+    <div id="header" class="container-fluid">
+      <div class="row">
+        <div class="header-content col-lg-3 col-xs-3 text-center">
+          <button class="header-content d-lg-none" href="#" id="nav-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
+          <a id="title-heading" href="index.html">
+            <h1 id="title_1">Formula One -</h1>
+            <h2 id="title_2">Success After V10</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bg-color" class="container-fluid"></div>
+  
+  <section>
+    <div class="section section-bg">
+      <div class="nav-buttons">
+        <a id="all-seasons" class="btn all-color" href="#" role="button">ALL SEASONS</a>
+        <a id="s-06" class="btn renault-color" href="#" role="button">2006</a>
+        <a id="s-07" class="btn ferrari-color" href="#" role="button">2007</a>
+        <a id="s-08" class="btn ferrari-color" href="#" role="button">2008</a>
+        <a id="s-09" class="btn brawn-color" href="#" role="button">2009</a>
+        <a id="s-10" class="btn rbr-color" href="#" role="button">2010</a>
+        <a id="s-11" class="btn rbr-color" href="#" role="button">2011</a>
+        <a id="s-12" class="btn rbr-color" href="#" role="button">2012</a>
+        <a id="s-13" class="btn rbr-color" href="#" role="button">2013</a>
+        <a id="s-14" class="btn mercedes-color" href="#" role="button">2014</a>
+        <a id="s-15" class="btn mercedes-color" href="#" role="button">2015</a>
+        <a id="s-16" class="btn mercedes-color" href="#" role="button">2016</a>
+        <a id="s-17" class="btn mercedes-color" href="#" role="button">2017</a>
+        <a id="s-18" class="btn mercedes-color" href="#" role="button">2018</a>
+      </div>
+      <div class="section-overlay">
+        <h3 class="section-heading text-center">All Race locations (2006 - 2018)</h3>
+        <div id="map"></div>
+      </div>
+      <div class="specific-section specific-bg-color specific-section-stats">
+        <div class="specific-section-bg">
+          <div class="specific-section-overlay">
+            <h3 class="specific-section-heading text-center gold">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              World Champion</h3>
+            <h4 class="specific-section-heading text-center">Sealed at: </h4>
+            <div id="driver-world-champ" class="dwc-stats"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section section-bg section-bg-pie">
+      <div class="section-container-pie row no-gutters">
+        <div class="col col-xs-12 col-md-4 pie-section-overlay">
+          <h3 class="section-heading text-center">Wins</h3>
+          <div id="wins-pie"></div>
+        </div>
+        <div class="col col-xs-12 col-md-4 pie-section-overlay"> 
+          <h3 class="section-heading text-center">Pole positions</h3>
+          <div id="poles-pie"></div>
+        </div>
+        <div class="col col-xs-12 col-md-4 pie-section-overlay">
+          <h3 class="section-heading text-center">Fastest laps</h3>
+          <div id="fast-laps-pie"></div>
+        </div>
+      </div>
+      <div class="specific-section specific-bg-color specific-section-stats">
+        <div class="specific-section-bg speed-demon-bg">
+          <div class="specific-section-overlay speed-demon-overlay">
+            <h3 class="specific-section-heading text-center">Season speed demon</h3>
+            <div id="season-speed-demon" class="gold spd-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i> 
+              <span id="sd-driver"> </span>
+            </div> 
+            <div id="sd-quali" class="sd-stats">Average qualifying speed(kph): </div>
+            <div id="sd-fast-laps" class="sd-stats">Average fastest lap speed(kph): </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section section-bg">
+      <div class="section-overlay">
+        <h3 class="section-heading text-center">Total points (champion & runner up)</h3>
+        <div id="all-constructor-points"></div>        
+      </div>
+      <div class="specific-section specific-bg-color specific-section-stats">
+        <div class="specific-section-bg">
+          <div class="specific-section-overlay">
+            <h3 class="specific-section-heading text-center">Out of nowhere <i class="fa fa-question-circle" aria-hidden="true"></i></h3>
+            <div id="out-of-nowhere-gold" class="gold oon-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="oon-gold-driver"> </span>
+            </div>
+            <div id="out-of-nowhere-silver" class="silver oon-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="oon-silver-driver"> </span>
+            </div>
+            <div id="out-of-nowhere-bronze" class="bronze oon-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="oon-bronze-driver"> </span>
+            </div>
+            <br>
+            <h3 class="specific-section-heading text-center">In his stride <i class="fa fa-question-circle" aria-hidden="true"></i></h3>
+            <div id="in-his-stride-gold" class="gold ihs-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="ihs-gold-driver"> </span>
+            </div>
+            <div id="in-his-stride-silver" class="silver ihs-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="ihs-silver-driver"> </span>
+            </div>
+            <div id="in-his-stride-bronze" class="bronze ihs-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="ihs-bronze-driver"> </span>
+            </div>
+            <br>
+            <h3 class="specific-section-heading text-center">All in a day's work <i class="fa fa-question-circle" aria-hidden="true"></i></h3>
+            <div id="all-in-a-day-gold" class="gold aiadw-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="aiad-gold-driver"> </span>
+            </div>
+            <div id="all-in-a-day-silver" class="silver aiadw-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="aiad-silver-driver"> </span>
+            </div>
+            <div id="all-in-a-day-bronze" class="bronze aiadw-stats">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              <span id="aiad-bronze-driver"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     
 </body>
 </html>
