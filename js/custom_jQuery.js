@@ -15,6 +15,11 @@ $(document).ready(function() {
   });
 
   $("#s-06").click(function() {
+    $("#world-champ").html("Fernando Alonso ");
+    $("#sealed-at").html("Round 18: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-es ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+
     $("#oon-gold-driver").html("Jenson Button: ");
     $("#oon-silver-driver").html("Michael Schumacher: ");
     $("#oon-bronze-driver").html("Fernando Alonso: ");
@@ -39,6 +44,11 @@ $(document).ready(function() {
   });
 
   $("#s-07").click(function() {
+    $("#world-champ").html("Kimi Raikkonen ");
+    $("#sealed-at").html("Round 17: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-fi ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+
     $("#all-in-a-day-bronze").show();
 
     $("#oon-gold-driver").html("Kimi Raikkonen: ");
@@ -65,6 +75,11 @@ $(document).ready(function() {
   });
 
   $("#s-08").click(function() {
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Round 18: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+    
     $("#all-in-a-day-bronze").show();
 
     $("#oon-gold-driver").html("Fernando Alonso: ");
@@ -91,6 +106,11 @@ $(document).ready(function() {
   });
 
   $("#s-09").click(function() {
+    $("#world-champ").html("Jenson Button ");
+    $("#sealed-at").html("Round 16: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+    
     $("#all-in-a-day-bronze").hide();
 
     $("#oon-gold-driver").html("Rubens Barrichello: ");
@@ -116,6 +136,11 @@ $(document).ready(function() {
   });
 
   $("#s-10").click(function() {
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Round 19: Abu Dhabi ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+    
     $("#all-in-a-day-silver").hide();
     $("#all-in-a-day-bronze").hide();
     
@@ -141,6 +166,11 @@ $(document).ready(function() {
   });
 
   $("#s-11").click(function() {
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Round 15: Japan ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-ae").removeClass("flag-icon-in").addClass("flag-icon-jp ");
+    
     $("#all-in-a-day-silver").hide();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").hide();
@@ -166,6 +196,11 @@ $(document).ready(function() {
   });
 
   $("#s-12").click(function() {
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Round 20: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+    
     $("#all-in-a-day-silver").hide();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").show();
@@ -193,6 +228,11 @@ $(document).ready(function() {
   });
 
   $("#s-13").click(function() {
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Round 16: India ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-br").addClass("flag-icon-in ");
+    
     $("#all-in-a-day-silver").hide();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").show();
@@ -220,6 +260,11 @@ $(document).ready(function() {
   });
 
   $("#s-14").click(function() {
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Round 19: Abu Dhabi ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+    
     $("#all-in-a-day-silver").hide();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").show();
@@ -246,6 +291,11 @@ $(document).ready(function() {
   });
 
   $("#s-15").click(function() {
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Round 16: USA ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-ae").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-us ");
+    
     $("#all-in-a-day-silver").show();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").show();
@@ -274,6 +324,11 @@ $(document).ready(function() {
   });
 
   $("#s-16").click(function() {
+    $("#world-champ").html("Nico Rosberg ");
+    $("#sealed-at").html("Round 21: Abu Dhabi ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+    
     $("#all-in-a-day-silver").show();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").show();
@@ -301,6 +356,11 @@ $(document).ready(function() {
   });
 
   $("#s-17").click(function() {
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Round 18: Mexico ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-mx ");
+    
     $("#all-in-a-day-silver").show();
     $("#all-in-a-day-bronze").hide();
     $("#in-his-stride-silver").show();
@@ -329,6 +389,11 @@ $(document).ready(function() {
   });
 
   $("#s-18").click(function() {
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Round 19: Mexico ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-mx ");
+    
     $("#all-in-a-day-gold").hide();
     $("#all-in-a-day-silver").hide();
     $("#all-in-a-day-bronze").hide();
@@ -354,8 +419,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
-    
-
-  

@@ -348,9 +348,6 @@ table {
 /*-----------------------------------------------------------Media Queries*/
 
 @media (min-width: 360px) and (max-width: 767px) {
-  .dc-chart {
-    margin-left: 25px;
-  }
   #wins-pie {
     padding-left: 0;
   }
@@ -363,15 +360,9 @@ table {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  .dc-chart {
-    margin-left: 30px;
-  }
 }
 
 @media (min-width: 411px) and (max-width: 767px) {
-  .dc-chart {
-    margin-left: 33px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

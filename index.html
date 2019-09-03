@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <title>Formula One - Success After V10</title>
-    
+
     <!--external css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/dc.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/flag-icon.css" rel="stylesheet" type="text/css" />
 
     <!--custom css-->
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
@@ -24,11 +25,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" type="text/javascript"></script>
     <script src="js/queue.min.js" type="text/javascript"></script>
     
-    <!--custom script-->
-    <script src="js/custom_jQuery.js" type="text/javascript"></script>
-    <script src="js/script.js" type="text/javascript"></script>
     
+    <!--custom script-->
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/custom_jQuery.js" type="text/javascript"></script>
 </head>
+
 <body>
   <div class="header-wrapper">
     <div id="header" class="container-fluid">
@@ -74,7 +76,9 @@
             <h3 class="specific-section-heading text-center gold">
               <i class="fa fa-trophy" aria-hidden="true"></i>
               World Champion</h3>
+              <span id="world-champ"> </span><span id="champ-flag" class="flag-icon "></span>
             <h4 class="specific-section-heading text-center">Sealed at: </h4>
+            <span id="sealed-at"> </span><span id="country-flag" class="flag-icon "></span>
             <div id="driver-world-champ" class="dwc-stats"></div>
           </div>
         </div>

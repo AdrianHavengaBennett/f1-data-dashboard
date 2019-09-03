@@ -516,7 +516,7 @@ function makeGraphs(error, data) {
     d.avg_fast_lap_speed = parseInt(d.avg_fast_lap_speed);
   });
 
-  show_06_info(ndx);
+  show_07_info(ndx);
   
   
 
@@ -558,6 +558,7 @@ function show_06_info(ndx) {
   show_poles_pie(ndx, "06");
   show_fast_laps_pie(ndx, "06");
   show_points(ndx, "06");
+  show_driver_world_champ_chart(ndx, "06", "Fernando Alonso");
   show_out_of_nowhere_percentage(ndx, "06", "Jenson Button", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "06", "Michael Schumacher", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "06", "Fernando Alonso", "#out-of-nowhere-bronze");
@@ -577,6 +578,7 @@ function show_07_info(ndx) {
   show_poles_pie(ndx, "07");
   show_fast_laps_pie(ndx, "07");
   show_points(ndx, "07");
+  show_driver_world_champ_chart(ndx, "07", "Kimi Raikkonen");
   show_out_of_nowhere_percentage(ndx, "07", "Kimi Raikkonen", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "07", "Fernando Alonso", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "07", "Lewis Hamilton", "#out-of-nowhere-bronze");
@@ -597,6 +599,7 @@ function show_08_info(ndx) {
   show_poles_pie(ndx, "08");
   show_fast_laps_pie(ndx, "08");
   show_points(ndx, "08");
+  show_driver_world_champ_chart(ndx, "08", "Lewis Hamilton");
   show_out_of_nowhere_percentage(ndx, "08", "Fernando Alonso", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "08", "Felipe Massa", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "08", "Lewis Hamilton", "#out-of-nowhere-bronze");
@@ -617,6 +620,7 @@ function show_09_info(ndx) {
   show_poles_pie(ndx, "09");
   show_fast_laps_pie(ndx, "09");
   show_points(ndx, "09");
+  show_driver_world_champ_chart(ndx, "09", "Jenson Button");
   show_out_of_nowhere_percentage(ndx, "09", "Rubens Barrichello", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "09", "Kimi Raikkonen", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "09", "Lewis Hamilton", "#out-of-nowhere-bronze");
@@ -636,6 +640,7 @@ function show_10_info(ndx) {
   show_poles_pie(ndx, "10");
   show_fast_laps_pie(ndx, "10");
   show_points(ndx, "10");
+  show_driver_world_champ_chart(ndx, "10", "Sebastian Vettel");
   show_out_of_nowhere_percentage(ndx, "10", "Jenson Button", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "10", "Lewis Hamilton", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "10", "Fernando Alonso", "#out-of-nowhere-bronze");
@@ -654,6 +659,7 @@ function show_11_info(ndx) {
   show_poles_pie(ndx, "11");
   show_fast_laps_pie(ndx, "11");
   show_points(ndx, "11");
+  show_driver_world_champ_chart(ndx, "11", "Sebastian Vettel");
   show_out_of_nowhere_percentage(ndx, "11", "Jenson Button", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "11", "Lewis Hamilton", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "11", "Mark Webber", "#out-of-nowhere-bronze");
@@ -670,6 +676,7 @@ function show_12_info(ndx) {
   show_poles_pie(ndx, "12");
   show_fast_laps_pie(ndx, "12");
   show_points(ndx, "12");
+  show_driver_world_champ_chart(ndx, "12", "Sebastian Vettel");
   show_out_of_nowhere_percentage(ndx, "12", "Mark Webber", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "12", "Kimi Raikkonen", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "12", "Pastor Maldonado", "#out-of-nowhere-bronze");
@@ -688,6 +695,7 @@ function show_13_info(ndx) {
   show_poles_pie(ndx, "13");
   show_fast_laps_pie(ndx, "13");
   show_points(ndx, "13");
+  show_driver_world_champ_chart(ndx, "13", "Sebastian Vettel");
   show_out_of_nowhere_percentage(ndx, "13", "Fernando Alonso", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "13", "Kimi Raikkonen", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "13", "Nico Rosberg", "#out-of-nowhere-bronze");
@@ -706,6 +714,7 @@ function show_14_info(ndx) {
   show_poles_pie(ndx, "14");
   show_fast_laps_pie(ndx, "14");
   show_points(ndx, "14");
+  show_driver_world_champ_chart(ndx, "14", "Lewis Hamilton");
   show_out_of_nowhere_percentage(ndx, "14", "Daniel Ricciardo", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "14", "Lewis Hamilton", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "14", "Nico Rosberg", "#out-of-nowhere-bronze");
@@ -723,6 +732,7 @@ function show_15_info(ndx) {
   show_poles_pie(ndx, "15");
   show_fast_laps_pie(ndx, "15");
   show_points(ndx, "15");
+  show_driver_world_champ_chart(ndx, "15", "Lewis Hamilton");
   show_out_of_nowhere_percentage(ndx, "15", "Sebastian Vettel", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "15", "Nico Rosberg", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "15", "Lewis Hamilton", "#out-of-nowhere-bronze");
@@ -742,6 +752,7 @@ function show_16_info(ndx) {
   show_poles_pie(ndx, "16");
   show_fast_laps_pie(ndx, "16");
   show_points(ndx, "16");
+  show_driver_world_champ_chart(ndx, "16", "Nico Rosberg");
   show_out_of_nowhere_percentage(ndx, "16", "Daniel Ricciardo", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "16", "Max Verstappen", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "16", "Nico Rosberg", "#out-of-nowhere-bronze");
@@ -760,6 +771,7 @@ function show_17_info(ndx) {
   show_poles_pie(ndx, "17");
   show_fast_laps_pie(ndx, "17");
   show_points(ndx, "17");
+  show_driver_world_champ_chart(ndx, "17", "Lewis Hamilton");
   show_out_of_nowhere_percentage(ndx, "17", "Max Verstappen", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "17", "Daniel Ricciardo", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "17", "Sebastian Vettel", "#out-of-nowhere-bronze");
@@ -779,6 +791,7 @@ function show_18_info(ndx) {
   show_poles_pie(ndx, "18");
   show_fast_laps_pie(ndx, "18");
   show_points(ndx, "18");
+  show_driver_world_champ_chart(ndx, "18", "Lewis Hamilton");
   show_out_of_nowhere_percentage(ndx, "18", "Max Verstappen", "#out-of-nowhere-gold");
   show_out_of_nowhere_percentage(ndx, "18", "Kimi Raikkonen", "#out-of-nowhere-silver");
   show_out_of_nowhere_percentage(ndx, "18", "Sebastian Vettel", "#out-of-nowhere-bronze");
@@ -922,12 +935,13 @@ function show_all_fast_laps_pie(ndx) {
 
 function show_all_constructor_points(ndx) {
   var width = document.getElementById("all-constructor-points").offsetWidth;
-
-  window.onresize = function(event) {
+  
+  function resize_chart() {
     var newWidth = document.getElementById("all-constructor-points").offsetWidth;
-    stackedChart.width(newWidth)
+    stackedChart.width(newWidth);
     stackedChart.render();
   }
+  window.addEventListener('resize', resize_chart);
 
   var dim = ndx.dimension(dc.pluck("season")); 
     function pointsPerTeam(dimension, team_name) {
@@ -980,7 +994,7 @@ function show_all_constructor_points(ndx) {
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
     .xAxisLabel("Season: 2006 - 2018")
-    .legend(dc.legend().x(25).y(20).itemHeight(15).gap(5))
+    // .legend(dc.legend().x(25).y(20).itemHeight(15).gap(5))
     .margins({top: 10, right: 25, bottom: 50, left: 125});
 }
 
@@ -1129,11 +1143,12 @@ function show_fast_laps_pie(ndx, season) {
 function show_points(ndx, season) {
   var width = document.getElementById("all-constructor-points").offsetWidth;
 
-  window.onresize = function(event) {
+  function resize_chart() {
     var newWidth = document.getElementById("all-constructor-points").offsetWidth;
-    stackedChart.width(newWidth)
+    stackedChart.width(newWidth);
     stackedChart.render();
   }
+  window.addEventListener('resize', resize_chart);
 
   var dim = ndx.dimension(function(d) {
     if(d.season == season) {
@@ -1196,8 +1211,71 @@ function show_points(ndx, season) {
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
     .xAxisLabel("Country (3-letter abbreviation)")
-    .legend(dc.legend().x(50).y(20).itemHeight(15).gap(5))
-    .margins({top: 10, right: 50, bottom: 50, left: 150});
+    .legend(dc.legend().x(25).y(10).itemHeight(5).gap(5))
+    .margins({top: 10, right: 25, bottom: 50, left: 100});
+}
+
+function show_driver_world_champ_chart(ndx, season, driver) {
+  var width = document.getElementById("driver-world-champ").offsetWidth;
+
+  function resize_chart() {
+    var newWidth = document.getElementById("driver-world-champ").offsetWidth;
+    lineChart.width(newWidth);
+    lineChart.render();
+  }
+  window.addEventListener('resize', resize_chart);
+
+  var dim = ndx.dimension(function(d) {
+    if(d.season == season) {
+      return d.country;
+    }
+  });
+  
+  function champ_points(dimension, driver) {
+    return dimension.group().reduce(
+      function(p, v) {
+        if(v.season == season) {
+          if(v.world_champ == "Yes" && v.driver == driver) {
+            p.count++;
+            p.total += v.champ_points;
+          }
+        }
+        return p;
+      },
+      function(p, v) {
+        if(v.season == season) {
+          if(v.world_champ == "Yes" && v.driver == driver) {
+            p.count--;
+            p.total -= v.champ_points;
+          }
+        }
+        return p;
+      },
+      function() {
+        return { count: 0, total: 0 };
+      }
+    );
+  }
+  
+  var champGroup = champ_points(dim, driver);
+
+  var lineChart = dc.lineChart("#driver-world-champ");
+    lineChart
+      // .ordering() //look into this
+      .width(width)
+      .height(300)
+      .dimension(dim)
+      .group(champGroup)
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        return d.value.total;
+      })
+      .x(d3.scale.ordinal())
+      .xUnits(dc.units.ordinal)
+      .yAxisLabel("Points")
+      .xAxisLabel("Country")
+      .margins({top: 25, right: 20, bottom: 50, left: 35})
+      .yAxis().ticks(5);
 }
 
 function show_out_of_nowhere_percentage(ndx, season, driver, element) {

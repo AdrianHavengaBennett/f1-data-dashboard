@@ -1,4 +1,4 @@
-season,engine_size,country,track_name,team_name,driver,world_champ,runner-up,champ_points,runner_up_points,pole_position,quali_time,avg_quali_speed,pole_car,pole_engine,winner,win_car,win_car_engine,fast_lap,fast_lap_time,avg_fast_lap_speed,fast_lap_car,fast_lap_engine
+season,engine_size,country,track_name,team_name,driver,world_champ,runner_up,champ_points,runner_up_points,pole_position,quali_time,avg_quali_speed,pole_car,pole_engine,winner,win_car,win_car_engine,fast_lap,fast_lap_time,avg_fast_lap_speed,fast_lap_car,fast_lap_engine
 06,V8,BHR,Bahrain International Circuit,Renault,Fernando Alonso,Yes,no,10,0,N/A,N/A,0,N/A,N/A,Fernando Alonso,Renault,Renault,N/A,N/A,0,N/A,N/A
 06,V8,BHR,Bahrain International Circuit,Renault,Giancarlo Fisichella,no,no,0,0,N/A,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,N/A
 06,V8,BHR,Bahrain International Circuit,McLaren,Kimi Raikkonen,no,no,0,0,N/A,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,N/A
