@@ -70,7 +70,7 @@ section {
 
 .btn {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .all-color {
@@ -182,7 +182,7 @@ section {
 .section-heading {
   text-align: left;
   font-family: "Lora", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #DB3535;
   padding-left: 12px;
   padding-right: 12px;
@@ -195,7 +195,7 @@ section {
   font-family: "Lora", sans-serif;
   font-size: 20px;
   color: #DB3535;
-  padding: 16px;
+  padding: 14px;
 }
 
 .section-overlay {
@@ -260,13 +260,18 @@ section {
 }
 
 #title_1 {
-  font-size: 30px;
-  padding-top: 12px;
+  font-size: 1.25em;
+  padding-top: 22px;
+  padding-bottom: 8px;
+  width: 50%;
+  margin: auto;
 }
 
 #title_2 {
-  font-size: 26px;
+  font-size: 1em;
   padding-bottom: 12px;
+  width: 50%;
+  margin: auto;
 }
 
 #map {
@@ -348,6 +353,9 @@ table {
 /*-----------------------------------------------------------Media Queries*/
 
 @media (min-width: 360px) and (max-width: 767px) {
+  .dc-chart {
+    margin-left: 25px;
+  }
   #wins-pie {
     padding-left: 0;
   }
@@ -360,9 +368,15 @@ table {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
+  .dc-chart {
+    margin-left: 30px;
+  }
 }
 
 @media (min-width: 411px) and (max-width: 767px) {
+  .dc-chart {
+    margin-left: 33px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -383,6 +397,22 @@ table {
   }
   #fast-laps-pie svg {
     margin-left: -25px;
+  }
+}
+
+@media (min-width: 768px) {
+  #title_1 {
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  #title_2 {
+    font-size: 1.70em;
+    width: 100%;
+  }
+  .section-heading {
+    font-size: 20px;
   }
 }
 
