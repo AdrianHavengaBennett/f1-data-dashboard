@@ -517,7 +517,7 @@ function makeGraphs(error, data) {
     d.avg_fast_lap_speed = parseInt(d.avg_fast_lap_speed);
   });
 
-  show_06_info(ndx);
+  show_all_info(ndx);
   
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("all-seasons").addEventListener("click", show_all_info);
@@ -548,7 +548,6 @@ function show_all_info(ndx) {
   show_all_poles_pie(ndx);
   show_all_fast_laps_pie(ndx);
   show_all_constructor_points(ndx);
-  dc.renderAll();
 }
 
 //********************************************************2006 INFO FUNCTION CALLS */
@@ -568,7 +567,6 @@ function show_06_info(ndx) {
   show_all_in_a_day_number_silver(ndx, "06", "Fernando Alonso", "#all-in-a-day-silver");
   show_quali_speed_demon(ndx, "06", "Kimi Raikkonen", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "06", "Kimi Raikkonen", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2007 INFO FUNCTION CALLS */
@@ -589,7 +587,6 @@ function show_07_info(ndx) {
   show_all_in_a_day_number_bronze(ndx, "07", "Lewis Hamilton", "#all-in-a-day-bronze");
   show_quali_speed_demon(ndx, "07", "Kimi Raikkonen", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "07", "Kimi Raikkonen", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2008 INFO FUNCTION CALLS */
@@ -610,7 +607,6 @@ function show_08_info(ndx) {
   show_all_in_a_day_number_bronze(ndx, "08", "Kimi Raikkonen", "#all-in-a-day-bronze");
   show_quali_speed_demon(ndx, "08", "Heikki Kovalainen", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "08", "Heikki Kovalainen", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2009 INFO FUNCTION CALLS */
@@ -630,7 +626,6 @@ function show_09_info(ndx) {
   show_all_in_a_day_number_silver(ndx, "09", "Sebastian Vettel", "#all-in-a-day-silver");
   show_quali_speed_demon(ndx, "09", "Sebastian Vettel", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "09", "Sebastian Vettel", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2010 INFO FUNCTION CALLS */
@@ -649,7 +644,6 @@ function show_10_info(ndx) {
   show_all_in_a_day_number_gold(ndx, "10", "Fernando Alonso", "#all-in-a-day-gold");
   show_quali_speed_demon(ndx, "10", "Fernando Alonso", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "10", "Fernando Alonso", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2011 INFO FUNCTION CALLS */
@@ -666,7 +660,6 @@ function show_11_info(ndx) {
   show_all_in_a_day_number_gold(ndx, "11", "Sebastian Vettel", "#all-in-a-day-gold");
   show_quali_speed_demon(ndx, "11", "Lewis Hamilton", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "11", "Lewis Hamilton", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2012 INFO FUNCTION CALLS */
@@ -685,7 +678,6 @@ function show_12_info(ndx) {
   show_all_in_a_day_number_gold(ndx, "12", "Sebastian Vettel", "#all-in-a-day-gold");
   show_quali_speed_demon(ndx, "12", "Jenson Button", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "12", "Jenson Button", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2013 INFO FUNCTION CALLS */
@@ -704,7 +696,6 @@ function show_13_info(ndx) {
   show_all_in_a_day_number_gold(ndx, "13", "Sebastian Vettel", "#all-in-a-day-gold");
   show_quali_speed_demon(ndx, "13", "Lewis Hamilton", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "13", "Lewis Hamilton", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2014 INFO FUNCTION CALLS */
@@ -722,7 +713,6 @@ function show_14_info(ndx) {
   show_all_in_a_day_number_gold(ndx, "14", "Lewis Hamilton", "#all-in-a-day-gold");
   show_quali_speed_demon(ndx, "14", "Nico Rosberg", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "14", "Nico Rosberg", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2015 INFO FUNCTION CALLS */
@@ -742,7 +732,6 @@ function show_15_info(ndx) {
   show_all_in_a_day_number_silver(ndx, "15", "Nico Rosberg", "#all-in-a-day-silver");
   show_quali_speed_demon(ndx, "15", "Lewis Hamilton", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "15", "Lewis Hamilton", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2016 INFO FUNCTION CALLS */
@@ -761,7 +750,6 @@ function show_16_info(ndx) {
   show_all_in_a_day_number_silver(ndx, "16", "Lewis Hamilton", "#all-in-a-day-silver");
   show_quali_speed_demon(ndx, "16", "Lewis Hamilton", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "16", "Lewis Hamilton", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2017 INFO FUNCTION CALLS */
@@ -781,7 +769,6 @@ function show_17_info(ndx) {
   show_all_in_a_day_number_silver(ndx, "17", "Valtteri Bottas", "#all-in-a-day-silver");
   show_quali_speed_demon(ndx, "17", "Valtteri Bottas", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "17", "Valtteri Bottas", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 //********************************************************2018 INFO FUNCTION CALLS */
@@ -799,18 +786,27 @@ function show_18_info(ndx) {
   show_in_his_stride_percentage_bronze(ndx, "18", "Sebastian Vettel", "#in-his-stride-bronze");
   show_quali_speed_demon(ndx, "18", "Kimi Raikkonen", "#sd-quali");
   show_fast_lap_speed_demon(ndx, "18", "Kimi Raikkonen", "#sd-fast-laps");
-  dc.renderAll();
 }
 
 let allStackedChart, allWinsPie, allPolesPie, allFastLapsPie, 
     stackedChart, winsPie, polesPie, fastLapsPie, 
-    lineChart,  qauliSpeedDemonNumber, fastLapSpeedDemon, 
+    lineChart, qauliSpeedDemonNumber, fastLapSpeedDemon, 
     oonNumberGold, oonNumberSilver, oonNumberBronze, 
     ihsNumberGold, ihsNumberSilver, ihsNumberBronze, 
     aiadNumberGold, aiadNumberSilver, aiadNumberBronze;
 
 //********************************************************ALL INFO FUNCTIONS*/
 function show_all_wins_pie(ndx) {
+
+  // function redraw_chart() {
+  //   allWinsPie.redraw();
+  // }
+
+  // var el = document.getElementById("all-seasons");
+  // if(el) {
+  //   el.addEventListener("click", redraw_chart);
+  // }
+
   var dim = ndx.dimension(dc.pluck("win_car"));
   var group = dim.group().reduce(
     function(p, v) {
@@ -836,7 +832,9 @@ function show_all_wins_pie(ndx) {
     }
   );
 
-  if(!allWinsPie)
+  if(allWinsPie) {
+    allWinsPie.redraw();
+  } else {
     allWinsPie = dc.pieChart("#wins-pie");
   allWinsPie
     .height(200)
@@ -853,6 +851,9 @@ function show_all_wins_pie(ndx) {
     })
     .group(group)
     .transitionDuration(1000);
+
+  allWinsPie.render();
+  }
 }
 
 function show_all_poles_pie(ndx) {
@@ -881,7 +882,9 @@ function show_all_poles_pie(ndx) {
     }
   );
 
-  if(!allPolesPie)
+  if(allPolesPie) {
+    allPolesPie.redraw();
+  } else {
     allPolesPie = dc.pieChart("#poles-pie")
   allPolesPie
     .height(200)
@@ -898,6 +901,9 @@ function show_all_poles_pie(ndx) {
     })
     .group(group)
     .transitionDuration(1000);
+  
+  allPolesPie.render();
+  }
 }
 
 function show_all_fast_laps_pie(ndx) {
@@ -926,7 +932,9 @@ function show_all_fast_laps_pie(ndx) {
     }
   );
 
-  if(!allFastLapsPie)
+  if(allFastLapsPie) {
+    allFastLapsPie.redraw();
+  } else {
     allFastLapsPie = dc.pieChart("#fast-laps-pie")
   allFastLapsPie
     .height(200)
@@ -943,6 +951,9 @@ function show_all_fast_laps_pie(ndx) {
     })
     .group(group)
     .transitionDuration(1000);
+
+  allFastLapsPie.render();
+  }
 }
 
 function show_all_constructor_points(ndx) {
@@ -986,15 +997,14 @@ function show_all_constructor_points(ndx) {
   var renPoints = pointsPerTeam(dim, "Renault");
   var mclPoints = pointsPerTeam(dim, "McLaren");
 
-  if(!allStackedChart)
+  if(allStackedChart) {
+    allStackedChart.redraw();
+  } else {
     allStackedChart = dc.barChart("#all-constructor-points");
   allStackedChart
     .width(width)
     .height(400)
     .dimension(dim)
-    .ordering(function(d) {
-      return d.race_no;
-    })
     .group(merPoints, "Mercedes")
     .stack(ferPoints, "Ferrari")
     .stack(rbrPoints, "RBR")
@@ -1011,12 +1021,25 @@ function show_all_constructor_points(ndx) {
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
     .xAxisLabel("Season: 2006 - 2018")
-    .legend(dc.legend().x(25).y(20).itemHeight(15).gap(5))
-    .margins({top: 10, right: 25, bottom: 50, left: 125});
+    .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))
+    .margins({top: 10, right: 10, bottom: 50, left: 105});
+
+  allStackedChart.render();
+  }
 }
 
 //********************************************************SPECIFIC PIE, POINTS & NUMBER INFO FUNCTIONS*/
 function show_wins_pie(ndx, season) {
+
+  // function redraw_chart() {
+  //   winsPie.redraw();
+  // }
+
+  // var el = document.getElementById("s_06");
+  // if(el) {
+  //   el.addEventListener("click", redraw_chart);
+  // }
+
   var dim = ndx.dimension(dc.pluck("win_car"));
   var group = dim.group().reduce(
     function(p, v) {
@@ -1046,7 +1069,9 @@ function show_wins_pie(ndx, season) {
     }
   );
 
-  if(!winsPie)
+  if(winsPie) {
+    winsPie.redraw();
+  } else {
     winsPie = dc.pieChart("#wins-pie")
   winsPie
     .height(200)
@@ -1063,6 +1088,9 @@ function show_wins_pie(ndx, season) {
     })
     .group(group)
     .transitionDuration(1000);
+
+  winsPie.render();
+  }
 }
 
 function show_poles_pie(ndx, season) {
@@ -1095,7 +1123,9 @@ function show_poles_pie(ndx, season) {
     }
   );
 
-  if(!polesPie)
+  if(polesPie) {
+    polesPie.redraw();
+  } else {
     polesPie = dc.pieChart("#poles-pie")
   polesPie
     .height(200)
@@ -1112,6 +1142,9 @@ function show_poles_pie(ndx, season) {
     })
     .group(group)
     .transitionDuration(1000);
+    
+  polesPie.render();
+  }
 }
 
 function show_fast_laps_pie(ndx, season) {
@@ -1144,7 +1177,9 @@ function show_fast_laps_pie(ndx, season) {
     }
   );
 
-  if(!fastLapsPie)
+  if(fastLapsPie) {
+    fastLapsPie.redraw();
+  } else {
     fastLapsPie = dc.pieChart("#fast-laps-pie")
   fastLapsPie
     .height(200)
@@ -1161,6 +1196,9 @@ function show_fast_laps_pie(ndx, season) {
     })
     .group(group)
     .transitionDuration(1000);
+
+  fastLapsPie.render();
+  }
 }
 
 function show_points(ndx, season) {
@@ -1175,7 +1213,7 @@ function show_points(ndx, season) {
 
   var dim = ndx.dimension(function(d) {
     if(d.season == season) {
-      return d.country;
+      return d.race_no;
     }
   });
   
@@ -1212,15 +1250,14 @@ function show_points(ndx, season) {
   var rbrPoints = pointsPerTeam(dim, "RBR");
   var merPoints = pointsPerTeam(dim, "Mercedes");
 
-  if(!stackedChart)
+  if(stackedChart) {
+    stackedChart.redraw();
+  } else {
     stackedChart = dc.barChart("#all-constructor-points");
   stackedChart
     .width(width)
     .height(400)
     .dimension(dim)
-    .ordering(function(d) {
-      return d.value;
-    })
     .group(ferPoints, "Ferrari")
     .stack(renPoints, "Renault")
     .stack(braPoints, "Brawn GP")
@@ -1237,9 +1274,12 @@ function show_points(ndx, season) {
     .transitionDuration(1000)
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
-    .xAxisLabel("Country (3-letter abbreviation)")
-    .legend(dc.legend().x(50).y(20).itemHeight(15).gap(5))
-    .margins({top: 10, right: 50, bottom: 50, left: 150});
+    .xAxisLabel("Race number")
+    .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))
+    .margins({top: 10, right: 10, bottom: 50, left: 105});
+
+  stackedChart.render();
+  }
 }
 
 function show_driver_world_champ_chart(ndx, season, driver) {
@@ -1254,7 +1294,7 @@ function show_driver_world_champ_chart(ndx, season, driver) {
 
   var dim = ndx.dimension(function(d) {
     if(d.season == season) {
-      return d.country;
+      return d.race_no;
     }
   });
   
@@ -1286,15 +1326,14 @@ function show_driver_world_champ_chart(ndx, season, driver) {
   
   var champGroup = champ_points(dim, driver);
 
-  if(!lineChart)
+  if(lineChart) {
+    lineChart.redraw();
+  } else {
     lineChart = dc.lineChart("#driver-world-champ");
   lineChart
     .width(width)
     .height(300)
     .dimension(dim)
-    .ordering(function(d) {
-      return d.race_no;
-    })
     .group(champGroup)
     .transitionDuration(1000)
     .valueAccessor(function(d) {
@@ -1303,10 +1342,13 @@ function show_driver_world_champ_chart(ndx, season, driver) {
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
     .yAxisLabel("Points")
-    .xAxisLabel("Country")
+    .xAxisLabel("Race Number")
     .margins({top: 20, right: 20, bottom: 50, left: 35})
     .renderHorizontalGridLines(true)
     .yAxis().ticks(5);
+
+  lineChart.render();
+  }
 }
 
 function show_quali_speed_demon(ndx, season, driver, element) {
@@ -1337,7 +1379,9 @@ function show_quali_speed_demon(ndx, season, driver, element) {
     }
   );
 
-  if(!qauliSpeedDemonNumber)
+  if(qauliSpeedDemonNumber) {
+    qauliSpeedDemonNumber.redraw();
+  } else {
     qauliSpeedDemonNumber = dc.numberDisplay(element)
   qauliSpeedDemonNumber
     .formatNumber(d3.format("0"))
@@ -1346,6 +1390,9 @@ function show_quali_speed_demon(ndx, season, driver, element) {
       return `${d.average_speed.toFixed(0)}`;
     })
     .group(group);
+
+  qauliSpeedDemonNumber.render();
+  }
 }
 
 function show_fast_lap_speed_demon(ndx, season, driver, element) {
@@ -1376,7 +1423,9 @@ function show_fast_lap_speed_demon(ndx, season, driver, element) {
     }
   );
 
-  if(!fastLapSpeedDemon)
+  if(fastLapSpeedDemon) {
+    fastLapSpeedDemon.redraw();
+  } else {
     fastLapSpeedDemon = dc.numberDisplay(element)
   fastLapSpeedDemon
     .formatNumber(d3.format("0"))
@@ -1385,6 +1434,9 @@ function show_fast_lap_speed_demon(ndx, season, driver, element) {
       return `${d.average_speed.toFixed(0)}`;
     })
     .group(group);
+
+  fastLapSpeedDemon.render();
+  }
 }
 
 function show_out_of_nowhere_percentage_gold(ndx, season, driver, element) {
@@ -1412,7 +1464,9 @@ function show_out_of_nowhere_percentage_gold(ndx, season, driver, element) {
     }
   );
 
-  if(!oonNumberGold)
+  if(oonNumberGold) {
+    oonNumberGold.redraw();
+  } else {
     oonNumberGold = dc.numberDisplay(element)
   oonNumberGold
     .formatNumber(d3.format(".2%"))
@@ -1425,6 +1479,9 @@ function show_out_of_nowhere_percentage_gold(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  oonNumberGold.render();
+  }
 }
 
 function show_out_of_nowhere_percentage_silver(ndx, season, driver, element) {
@@ -1452,7 +1509,9 @@ function show_out_of_nowhere_percentage_silver(ndx, season, driver, element) {
     }
   );
 
-  if(!oonNumberSilver)
+  if(oonNumberSilver) {
+    oonNumberSilver.redraw();
+  } else {
     oonNumberSilver = dc.numberDisplay(element)
   oonNumberSilver
     .formatNumber(d3.format(".2%"))
@@ -1465,6 +1524,9 @@ function show_out_of_nowhere_percentage_silver(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  oonNumberSilver.render();
+  }
 }
 
 function show_out_of_nowhere_percentage_bronze(ndx, season, driver, element) {
@@ -1492,7 +1554,9 @@ function show_out_of_nowhere_percentage_bronze(ndx, season, driver, element) {
     }
   );
 
-  if(!oonNumberBronze)
+  if(oonNumberBronze) {
+    oonNumberBronze.redraw();
+  } else {
     oonNumberBronze = dc.numberDisplay(element)
   oonNumberBronze
     .formatNumber(d3.format(".2%"))
@@ -1505,6 +1569,9 @@ function show_out_of_nowhere_percentage_bronze(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  oonNumberBronze.render();
+  }
 }
 
 function show_in_his_stride_percentage_gold(ndx, season, driver, element) {
@@ -1532,7 +1599,9 @@ function show_in_his_stride_percentage_gold(ndx, season, driver, element) {
     }
   );
 
-  if(!ihsNumberGold)
+  if(ihsNumberGold) {
+    ihsNumberGold.redraw();
+  } else {
     ihsNumberGold = dc.numberDisplay(element)
   ihsNumberGold
     .formatNumber(d3.format(".2%"))
@@ -1545,6 +1614,9 @@ function show_in_his_stride_percentage_gold(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  ihsNumberGold.render();
+  }
 }
 
 function show_in_his_stride_percentage_silver(ndx, season, driver, element) {
@@ -1572,7 +1644,9 @@ function show_in_his_stride_percentage_silver(ndx, season, driver, element) {
     }
   );
 
-  if(!ihsNumberSilver)
+  if(ihsNumberSilver) {
+    ihsNumberSilver.redraw();
+  } else {
     ihsNumberSilver = dc.numberDisplay(element)
   ihsNumberSilver
     .formatNumber(d3.format(".2%"))
@@ -1585,6 +1659,9 @@ function show_in_his_stride_percentage_silver(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  ihsNumberSilver.render();
+  }
 }
 
 function show_in_his_stride_percentage_bronze(ndx, season, driver, element) {
@@ -1612,7 +1689,9 @@ function show_in_his_stride_percentage_bronze(ndx, season, driver, element) {
     }
   );
 
-  if(!ihsNumberBronze)
+  if(ihsNumberBronze) {
+    ihsNumberBronze.redraw();
+  } else {
     ihsNumberBronze = dc.numberDisplay(element)
   ihsNumberBronze
     .formatNumber(d3.format(".2%"))
@@ -1625,6 +1704,9 @@ function show_in_his_stride_percentage_bronze(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  ihsNumberBronze.render();
+  }
 }
 
 function show_all_in_a_day_number_gold(ndx, season, driver, element) {
@@ -1652,7 +1734,9 @@ function show_all_in_a_day_number_gold(ndx, season, driver, element) {
     }
   );
 
-  if(!aiadNumberGold)
+  if(aiadNumberGold) {
+    aiadNumberGold.redraw();
+  } else {
     aiadNumberGold = dc.numberDisplay(element)
   aiadNumberGold
     .formatNumber(d3.format(".0"))
@@ -1665,6 +1749,9 @@ function show_all_in_a_day_number_gold(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  aiadNumberGold.render();
+  }
 }
 
 function show_all_in_a_day_number_silver(ndx, season, driver, element) {
@@ -1692,7 +1779,9 @@ function show_all_in_a_day_number_silver(ndx, season, driver, element) {
     }
   );
 
-  if(!aiadNumberSilver)
+  if(aiadNumberSilver) {
+    aiadNumberSilver.redraw();
+  } else {
     aiadNumberSilver = dc.numberDisplay(element)
   aiadNumberSilver
     .formatNumber(d3.format(".0"))
@@ -1705,6 +1794,9 @@ function show_all_in_a_day_number_silver(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  aiadNumberSilver.render();
+  }
 }
 
 function show_all_in_a_day_number_bronze(ndx, season, driver, element) {
@@ -1732,7 +1824,9 @@ function show_all_in_a_day_number_bronze(ndx, season, driver, element) {
     }
   );
 
-  if(!aiadNumberBronze)
+  if(aiadNumberBronze) {
+    aiadNumberBronze.redraw();
+  } else {
     aiadNumberBronze = dc.numberDisplay(element)
   aiadNumberBronze
     .formatNumber(d3.format(".0"))
@@ -1745,6 +1839,9 @@ function show_all_in_a_day_number_bronze(ndx, season, driver, element) {
       }
     })
     .group(group);
+
+  aiadNumberBronze.render();
+  }
 }
 
 //------------------------------------------------------D3/DC/Crossfilter Graphs/Charts/Numbers End
