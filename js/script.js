@@ -797,16 +797,6 @@ let allStackedChart, allWinsPie, allPolesPie, allFastLapsPie,
 
 //********************************************************ALL INFO FUNCTIONS*/
 function show_all_wins_pie(ndx) {
-
-  // function redraw_chart() {
-  //   allWinsPie.redraw();
-  // }
-
-  // var el = document.getElementById("all-seasons");
-  // if(el) {
-  //   el.addEventListener("click", redraw_chart);
-  // }
-
   var dim = ndx.dimension(dc.pluck("win_car"));
   var group = dim.group().reduce(
     function(p, v) {
@@ -833,7 +823,10 @@ function show_all_wins_pie(ndx) {
   );
 
   if(allWinsPie) {
-    allWinsPie.redraw();
+    allWinsPie
+      .group(group)
+      .dimension(dim)
+      .redraw();
   } else {
     allWinsPie = dc.pieChart("#wins-pie");
   allWinsPie
@@ -851,7 +844,7 @@ function show_all_wins_pie(ndx) {
     })
     .group(group)
     .transitionDuration(1000);
-
+    
   allWinsPie.render();
   }
 }
@@ -883,7 +876,10 @@ function show_all_poles_pie(ndx) {
   );
 
   if(allPolesPie) {
-    allPolesPie.redraw();
+    allPolesPie
+      .group(group)
+      .dimension(dim)
+      .redraw();
   } else {
     allPolesPie = dc.pieChart("#poles-pie")
   allPolesPie
@@ -901,7 +897,7 @@ function show_all_poles_pie(ndx) {
     })
     .group(group)
     .transitionDuration(1000);
-  
+    
   allPolesPie.render();
   }
 }
@@ -933,7 +929,10 @@ function show_all_fast_laps_pie(ndx) {
   );
 
   if(allFastLapsPie) {
-    allFastLapsPie.redraw();
+    allFastLapsPie
+      .group(group)
+      .dimension(dim)
+      .redraw();
   } else {
     allFastLapsPie = dc.pieChart("#fast-laps-pie")
   allFastLapsPie
@@ -951,7 +950,7 @@ function show_all_fast_laps_pie(ndx) {
     })
     .group(group)
     .transitionDuration(1000);
-
+    
   allFastLapsPie.render();
   }
 }
@@ -998,7 +997,15 @@ function show_all_constructor_points(ndx) {
   var mclPoints = pointsPerTeam(dim, "McLaren");
 
   if(allStackedChart) {
-    allStackedChart.redraw();
+    allStackedChart
+      .group(merPoints, "Mercedes")
+      .stack(ferPoints, "Ferrari")
+      .stack(rbrPoints, "RBR")
+      .stack(braPoints, "Brawn GP")
+      .stack(renPoints, "Renault")
+      .stack(mclPoints, "McLaren")
+      .dimension(dim)
+      .redraw();
   } else {
     allStackedChart = dc.barChart("#all-constructor-points");
   allStackedChart
@@ -1030,16 +1037,6 @@ function show_all_constructor_points(ndx) {
 
 //********************************************************SPECIFIC PIE, POINTS & NUMBER INFO FUNCTIONS*/
 function show_wins_pie(ndx, season) {
-
-  // function redraw_chart() {
-  //   winsPie.redraw();
-  // }
-
-  // var el = document.getElementById("s_06");
-  // if(el) {
-  //   el.addEventListener("click", redraw_chart);
-  // }
-
   var dim = ndx.dimension(dc.pluck("win_car"));
   var group = dim.group().reduce(
     function(p, v) {
@@ -1070,7 +1067,10 @@ function show_wins_pie(ndx, season) {
   );
 
   if(winsPie) {
-    winsPie.redraw();
+    winsPie
+      .group(group)
+      .dimension(dim)
+      .redraw();
   } else {
     winsPie = dc.pieChart("#wins-pie")
   winsPie
@@ -1124,7 +1124,10 @@ function show_poles_pie(ndx, season) {
   );
 
   if(polesPie) {
-    polesPie.redraw();
+    polesPie
+    .group(group)
+    .dimension(dim)
+    .redraw();
   } else {
     polesPie = dc.pieChart("#poles-pie")
   polesPie
@@ -1142,7 +1145,7 @@ function show_poles_pie(ndx, season) {
     })
     .group(group)
     .transitionDuration(1000);
-    
+
   polesPie.render();
   }
 }
@@ -1178,7 +1181,10 @@ function show_fast_laps_pie(ndx, season) {
   );
 
   if(fastLapsPie) {
-    fastLapsPie.redraw();
+    fastLapsPie
+      .group(group)
+      .dimension(dim)
+      .redraw();
   } else {
     fastLapsPie = dc.pieChart("#fast-laps-pie")
   fastLapsPie
@@ -1251,7 +1257,14 @@ function show_points(ndx, season) {
   var merPoints = pointsPerTeam(dim, "Mercedes");
 
   if(stackedChart) {
-    stackedChart.redraw();
+    stackedChart
+    .group(ferPoints, "Ferrari")
+    .stack(renPoints, "Renault")
+    .stack(braPoints, "Brawn GP")
+    .stack(mclPoints, "McLaren")
+    .stack(rbrPoints, "RBR")
+    .stack(merPoints, "Mercedes")
+    .redraw();
   } else {
     stackedChart = dc.barChart("#all-constructor-points");
   stackedChart
@@ -1327,7 +1340,10 @@ function show_driver_world_champ_chart(ndx, season, driver) {
   var champGroup = champ_points(dim, driver);
 
   if(lineChart) {
-    lineChart.redraw();
+    lineChart
+      .group(champGroup)
+      .dimension(dim)
+      .redraw();
   } else {
     lineChart = dc.lineChart("#driver-world-champ");
   lineChart
@@ -1380,7 +1396,9 @@ function show_quali_speed_demon(ndx, season, driver, element) {
   );
 
   if(qauliSpeedDemonNumber) {
-    qauliSpeedDemonNumber.redraw();
+    qauliSpeedDemonNumber
+      .group(group)
+      .redraw();
   } else {
     qauliSpeedDemonNumber = dc.numberDisplay(element)
   qauliSpeedDemonNumber
@@ -1424,7 +1442,9 @@ function show_fast_lap_speed_demon(ndx, season, driver, element) {
   );
 
   if(fastLapSpeedDemon) {
-    fastLapSpeedDemon.redraw();
+    fastLapSpeedDemon
+      .group(group)
+      .redraw();
   } else {
     fastLapSpeedDemon = dc.numberDisplay(element)
   fastLapSpeedDemon
@@ -1465,7 +1485,9 @@ function show_out_of_nowhere_percentage_gold(ndx, season, driver, element) {
   );
 
   if(oonNumberGold) {
-    oonNumberGold.redraw();
+    oonNumberGold
+      .group(group)
+      .redraw();
   } else {
     oonNumberGold = dc.numberDisplay(element)
   oonNumberGold
@@ -1510,7 +1532,9 @@ function show_out_of_nowhere_percentage_silver(ndx, season, driver, element) {
   );
 
   if(oonNumberSilver) {
-    oonNumberSilver.redraw();
+    oonNumberSilver
+      .group(group)
+      .redraw();
   } else {
     oonNumberSilver = dc.numberDisplay(element)
   oonNumberSilver
@@ -1555,7 +1579,9 @@ function show_out_of_nowhere_percentage_bronze(ndx, season, driver, element) {
   );
 
   if(oonNumberBronze) {
-    oonNumberBronze.redraw();
+    oonNumberBronze
+      .group(group)
+      .redraw();
   } else {
     oonNumberBronze = dc.numberDisplay(element)
   oonNumberBronze
@@ -1600,7 +1626,9 @@ function show_in_his_stride_percentage_gold(ndx, season, driver, element) {
   );
 
   if(ihsNumberGold) {
-    ihsNumberGold.redraw();
+    ihsNumberGold
+      .group(group)
+      .redraw();
   } else {
     ihsNumberGold = dc.numberDisplay(element)
   ihsNumberGold
@@ -1645,7 +1673,9 @@ function show_in_his_stride_percentage_silver(ndx, season, driver, element) {
   );
 
   if(ihsNumberSilver) {
-    ihsNumberSilver.redraw();
+    ihsNumberSilver
+      .group(group)
+      .redraw();
   } else {
     ihsNumberSilver = dc.numberDisplay(element)
   ihsNumberSilver
@@ -1690,7 +1720,9 @@ function show_in_his_stride_percentage_bronze(ndx, season, driver, element) {
   );
 
   if(ihsNumberBronze) {
-    ihsNumberBronze.redraw();
+    ihsNumberBronze
+      .group(group)
+      .redraw();
   } else {
     ihsNumberBronze = dc.numberDisplay(element)
   ihsNumberBronze
@@ -1735,7 +1767,9 @@ function show_all_in_a_day_number_gold(ndx, season, driver, element) {
   );
 
   if(aiadNumberGold) {
-    aiadNumberGold.redraw();
+    aiadNumberGold
+      .group(group)
+      .redraw();
   } else {
     aiadNumberGold = dc.numberDisplay(element)
   aiadNumberGold
@@ -1780,7 +1814,9 @@ function show_all_in_a_day_number_silver(ndx, season, driver, element) {
   );
 
   if(aiadNumberSilver) {
-    aiadNumberSilver.redraw();
+    aiadNumberSilver
+      .group(group)
+      .redraw();
   } else {
     aiadNumberSilver = dc.numberDisplay(element)
   aiadNumberSilver
@@ -1825,7 +1861,9 @@ function show_all_in_a_day_number_bronze(ndx, season, driver, element) {
   );
 
   if(aiadNumberBronze) {
-    aiadNumberBronze.redraw();
+    aiadNumberBronze
+      .group(group)
+      .redraw();
   } else {
     aiadNumberBronze = dc.numberDisplay(element)
   aiadNumberBronze

@@ -17,7 +17,9 @@ $(document).ready(function() {
   $("#s-06").click(function() {
     $("#world-champ").html("Fernando Alonso ");
     $("#sealed-at").html("Round 18: Brazil ");
+    //remove all other flags before adding correct one
     $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-es ");
+    //remove all other flags before adding correct one
     $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
 
     $("#oon-gold-driver").html("Jenson Button: ");
