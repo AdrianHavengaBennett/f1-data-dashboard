@@ -521,19 +521,19 @@ function makeGraphs(error, data) {
   
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("all-seasons").addEventListener("click", show_all_info);
-    document.getElementById("s_06").addEventListener("click", show_06_info);
-    document.getElementById("s_07").addEventListener("click", show_07_info);
-    document.getElementById("s_08").addEventListener("click", show_08_info);
-    document.getElementById("s_09").addEventListener("click", show_09_info);
-    document.getElementById("s_10").addEventListener("click", show_10_info);
-    document.getElementById("s_11").addEventListener("click", show_11_info);
-    document.getElementById("s_12").addEventListener("click", show_12_info);
-    document.getElementById("s_13").addEventListener("click", show_13_info);
-    document.getElementById("s_14").addEventListener("click", show_14_info);
-    document.getElementById("s_15").addEventListener("click", show_15_info);
-    document.getElementById("s_16").addEventListener("click", show_16_info);
-    document.getElementById("s_17").addEventListener("click", show_17_info);
-    document.getElementById("s_18").addEventListener("click", show_18_info);
+    document.getElementById("s-06").addEventListener("click", show_06_info);
+    document.getElementById("s-07").addEventListener("click", show_07_info);
+    document.getElementById("s-08").addEventListener("click", show_08_info);
+    document.getElementById("s-09").addEventListener("click", show_09_info);
+    document.getElementById("s-10").addEventListener("click", show_10_info);
+    document.getElementById("s-11").addEventListener("click", show_11_info);
+    document.getElementById("s-12").addEventListener("click", show_12_info);
+    document.getElementById("s-13").addEventListener("click", show_13_info);
+    document.getElementById("s-14").addEventListener("click", show_14_info);
+    document.getElementById("s-15").addEventListener("click", show_15_info);
+    document.getElementById("s-16").addEventListener("click", show_16_info);
+    document.getElementById("s-17").addEventListener("click", show_17_info);
+    document.getElementById("s-18").addEventListener("click", show_18_info);
   });
 }
 
