@@ -519,21 +519,439 @@ function makeGraphs(error, data) {
 
   show_all_info(ndx);
   
-  document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("all-seasons").addEventListener("click", show_all_info);
-    document.getElementById("s-06").addEventListener("click", show_06_info);
-    document.getElementById("s-07").addEventListener("click", show_07_info);
-    document.getElementById("s-08").addEventListener("click", show_08_info);
-    document.getElementById("s-09").addEventListener("click", show_09_info);
-    document.getElementById("s-10").addEventListener("click", show_10_info);
-    document.getElementById("s-11").addEventListener("click", show_11_info);
-    document.getElementById("s-12").addEventListener("click", show_12_info);
-    document.getElementById("s-13").addEventListener("click", show_13_info);
-    document.getElementById("s-14").addEventListener("click", show_14_info);
-    document.getElementById("s-15").addEventListener("click", show_15_info);
-    document.getElementById("s-16").addEventListener("click", show_16_info);
-    document.getElementById("s-17").addEventListener("click", show_17_info);
-    document.getElementById("s-18").addEventListener("click", show_18_info);
+  $("#nav-toggle").click(function() {
+    $(".nav-buttons").slideToggle(500, "swing");
+  });
+
+  d3.select("#all-seasons").on('click.foo', function() {
+    show_all_info(ndx);
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "0%" }, 1000);
+      $(".specific-bg-color").animate({ right: "0%" }, 1000);
+      console.log(say_hello("All"));
+    } else {
+      $(".specific-bg-color").css("position", "absolute");
+    }
+  });
+
+  d3.select("#s-06").on('click.foo', function() {
+    show_06_info(ndx);
+    $("#world-champ").html("Fernando Alonso ");
+    $("#sealed-at").html("Race 18: Brazil ");
+    //remove all other flags before adding correct one
+    $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-es ");
+    //remove all other flags before adding correct one
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+
+    $("#oon-gold-driver").html("Jenson Button: ");
+    $("#oon-silver-driver").html("Michael Schumacher: ");
+    $("#oon-bronze-driver").html("Fernando Alonso: ");
+
+    $("#ihs-gold-driver").html("Felipe Massa: ");
+    $("#ihs-silver-driver").html("Fernando Alonso: ");
+    $("#ihs-bronze-driver").html("Michael Schumacher: ");
+
+    $("#aiad-gold-driver").html("Michael Schumacher: ");
+    $("#aiad-silver-driver").html("Fernando Alonso: ");
+    $("#all-in-a-day-bronze").hide();
+
+    $("#sd-driver").html("Kimi Raikkonen");
+
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2006")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-07").on('click.foo', function() {
+    show_07_info(ndx);
+    $("#world-champ").html("Kimi Raikkonen ");
+    $("#sealed-at").html("Race 17: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-fi ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+
+    $("#all-in-a-day-bronze").show();
+
+    $("#oon-gold-driver").html("Kimi Raikkonen: ");
+    $("#oon-silver-driver").html("Fernando Alonso: ");
+    $("#oon-bronze-driver").html("Lewis Hamilton: ");
+
+    $("#ihs-gold-driver").html("Lewis Hamilton: ");
+    $("#ihs-silver-driver").html("Felipe Massa: ");
+    $("#ihs-bronze-driver").html("Kimi Raikkonen: ");
+    
+    $("#aiad-gold-driver").html("Fernando Alonso: ");
+    $("#aiad-silver-driver").html("Felipe Massa: ");
+    $("#aiad-bronze-driver").html("Lewis Hamilton: ");
+
+    $("#sd-driver").html("Kimi Raikkonen");
+
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2007")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-08").on('click.foo', function() {
+    show_08_info(ndx);
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Race 18: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+    
+    $("#all-in-a-day-bronze").show();
+
+    $("#oon-gold-driver").html("Fernando Alonso: ");
+    $("#oon-silver-driver").html("Felipe Massa: ");
+    $("#oon-bronze-driver").html("Lewis Hamilton: ");
+
+    $("#ihs-gold-driver").html("Sebastian Vettel: ");
+    $("#ihs-silver-driver").html("Lewis Hamilton: ");
+    $("#ihs-bronze-driver").html("Felipe Massa: ");
+    
+    $("#aiad-gold-driver").html("Felipe Massa: ");
+    $("#aiad-silver-driver").html("Lewis Hamilton: ");
+    $("#aiad-bronze-driver").html("Kimi Raikkonen: ");
+
+    $("#sd-driver").html("Heikki Kovalainen");
+
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2008")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-09").on('click.foo', function() {
+    show_09_info(ndx);
+    $("#world-champ").html("Jenson Button ");
+    $("#sealed-at").html("Race 16: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+    
+    $("#all-in-a-day-bronze").hide();
+
+    $("#oon-gold-driver").html("Rubens Barrichello: ");
+    $("#oon-silver-driver").html("Kimi Raikkonen: ");
+    $("#oon-bronze-driver").html("Lewis Hamilton: ");
+
+    $("#ihs-gold-driver").html("Sebastian Vettel: ");
+    $("#ihs-silver-driver").html("Jenson Button: ");
+    $("#ihs-bronze-driver").html("Lewis Hamilton: ");
+    
+    $("#aiad-gold-driver").html("Jenson Button: ");
+    $("#aiad-silver-driver").html("Sebastian Vettel: ");
+
+    $("#sd-driver").html("Sebastian Vettel");
+
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2009")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-10").on('click.foo', function() {
+    show_10_info(ndx);
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Race 19: Abu Dhabi ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+    
+    $("#all-in-a-day-silver").hide();
+    $("#all-in-a-day-bronze").hide();
+    
+    $("#oon-gold-driver").html("Jenson Button: ");
+    $("#oon-silver-driver").html("Lewis Hamilton: ");
+    $("#oon-bronze-driver").html("Fernando Alonso: ");
+
+    $("#ihs-gold-driver").html("Sebastian Vettel: ");
+    $("#ihs-silver-driver").html("Mark Webber: ");
+    $("#ihs-bronze-driver").html("Fernando Alonso: ");
+    
+    $("#aiad-gold-driver").html("Fernando Alonso: ");
+
+    $("#sd-driver").html("Fernando Alonso: ");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2010")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-11").on('click.foo', function() {
+    show_11_info(ndx);
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Race 15: Japan ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-ae").removeClass("flag-icon-in").addClass("flag-icon-jp ");
+    
+    $("#all-in-a-day-silver").hide();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").hide();
+    $("#in-his-stride-bronze").hide();
+    
+    $("#oon-gold-driver").html("Jenson Button: ");
+    $("#oon-silver-driver").html("Lewis Hamilton: ");
+    $("#oon-bronze-driver").html("Mark Webber: ");
+
+    $("#ihs-gold-driver").html("Sebastian Vettel: ");
+    
+    $("#aiad-gold-driver").html("Sebastian Vettel: ");
+
+    $("#sd-driver").html("Lewis Hamilton");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2011")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-12").on('click.foo', function() {
+    show_12_info(ndx);
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Race 20: Brazil ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+    
+    $("#all-in-a-day-silver").hide();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").show();
+    
+    $("#oon-gold-driver").html("Mark Webber: ");
+    $("#oon-silver-driver").html("Kimi Raikkonen: ");
+    $("#oon-bronze-driver").html("Pastor Maldonado: ");
+
+    $("#ihs-gold-driver").html("Nico Rosberg: ");
+    $("#ihs-silver-driver").html("Sebastian Vettel: ");
+    $("#ihs-bronze-driver").html("Lewis Hamilton: ");
+    
+    $("#aiad-gold-driver").html("Sebastian Vettel: ");
+    
+    $("#sd-driver").html("Jenson Button");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2012")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-13").on('click.foo', function() {
+    show_13_info(ndx);
+    $("#world-champ").html("Sebastian Vettel ");
+    $("#sealed-at").html("Race 16: India ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-br").addClass("flag-icon-in ");
+    
+    $("#all-in-a-day-silver").hide();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").show();
+    
+    $("#oon-gold-driver").html("Fernando Alonso: ");
+    $("#oon-silver-driver").html("Kimi Raikkonen: ");
+    $("#oon-bronze-driver").html("Nico Rosberg: ");
+
+    $("#ihs-gold-driver").html("Lewis Hamilton: ");
+    $("#ihs-silver-driver").html("Sebastian Vettel: ");
+    $("#ihs-bronze-driver").html("Nico Rosberg: ");
+    
+    $("#aiad-gold-driver").html("Sebastian Vettel: ");
+    
+    $("#sd-driver").html("Lewis Hamilton");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2013")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-14").on('click.foo', function() {
+    show_14_info(ndx);
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Race 19: Abu Dhabi ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+    
+    $("#all-in-a-day-silver").hide();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").hide();
+    
+    $("#oon-gold-driver").html("Daniel Ricciardo: ");
+    $("#oon-silver-driver").html("Lewis Hamilton: ");
+    $("#oon-bronze-driver").html("Nico Rosberg: ");
+
+    $("#ihs-gold-driver").html("Nico Rosberg: ");
+    $("#ihs-silver-driver").html("Lewis Hamilton: ");
+    
+    $("#aiad-gold-driver").html("Lewis Hamilton: ");
+    
+    $("#sd-driver").html("Nico Rosberg");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2014")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-15").on('click.foo', function() {
+    show_15_info(ndx);
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Race 16: USA ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-ae").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-us ");
+    
+    $("#all-in-a-day-silver").show();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").show();
+    
+    $("#oon-gold-driver").html("Sebastian Vettel: ");
+    $("#oon-silver-driver").html("Nico Rosberg: ");
+    $("#oon-bronze-driver").html("Lewis Hamilton: ");
+
+    $("#ihs-gold-driver").html("Lewis Hamilton: ");
+    $("#ihs-silver-driver").html("Nico Rosberg: ");
+    $("#ihs-bronze-driver").html("Sebastian Vettel: ");
+    
+    $("#aiad-gold-driver").html("Lewis Hamilton: ");
+    $("#aiad-silver-driver").html("Nico Rosberg: ");
+
+    $("#sd-driver").html("Lewis Hamilton");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2015")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-16").on('click.foo', function() {
+    show_16_info(ndx);
+    $("#world-champ").html("Nico Rosberg ");
+    $("#sealed-at").html("Race 21: Abu Dhabi ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+    
+    $("#all-in-a-day-silver").show();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").hide();
+    
+    $("#oon-gold-driver").html("Daniel Ricciardo: ");
+    $("#oon-silver-driver").html("Max Verstappen: ");
+    $("#oon-bronze-driver").html("Nico Rosberg: ");
+
+    $("#ihs-gold-driver").html("Lewis Hamilton: ");
+    $("#ihs-silver-driver").html("Nico Rosberg: ");
+    
+    $("#aiad-gold-driver").html("Nico Rosberg: ");
+    $("#aiad-silver-driver").html("Lewis Hamilton: ");
+    
+    $("#sd-driver").html("Lewis Hamilton");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2016")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-17").on('click.foo', function() {
+    show_17_info(ndx);
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Race 18: Mexico ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-mx ");
+    
+    $("#all-in-a-day-silver").show();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").show();
+    
+    $("#oon-gold-driver").html("Max Verstappen: ");
+    $("#oon-silver-driver").html("Daniel Ricciardo: ");
+    $("#oon-bronze-driver").html("Sebastian Vettel: ");
+
+    $("#ihs-gold-driver").html("Lewis Hamilton: ");
+    $("#ihs-silver-driver").html("Valtteri Bottas: ");
+    $("#ihs-bronze-driver").html("Sebastian Vettel: ");
+    
+    $("#aiad-gold-driver").html("Lewis Hamilton: ");
+    $("#aiad-silver-driver").html("Valtteri Bottas: ");
+    
+    $("#sd-driver").html("Valtteri Bottas");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2017")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
+  });
+
+  d3.select("#s-18").on('click.foo', function() {
+    show_18_info(ndx);
+    $("#world-champ").html("Lewis Hamilton ");
+    $("#sealed-at").html("Race 19: Mexico ");
+    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
+    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-mx ");
+    
+    $("#all-in-a-day-gold").hide();
+    $("#all-in-a-day-silver").hide();
+    $("#all-in-a-day-bronze").hide();
+    $("#in-his-stride-silver").show();
+    $("#in-his-stride-bronze").show();
+    
+    $("#oon-gold-driver").html("Max Verstappen: ");
+    $("#oon-silver-driver").html("Kimi Raikkonen: ");
+    $("#oon-bronze-driver").html("Sebastian Vettel: ");
+
+    $("#ihs-gold-driver").html("Lewis Hamilton: ");
+    $("#ihs-silver-driver").html("Daniel Ricciardo: ");
+    $("#ihs-bronze-driver").html("Sebastian Vettel: ");
+    
+    $("#sd-driver").html("Kimi Raikkonen");
+    
+    if(window.matchMedia('(min-width: 1024px)').matches) {
+      $(".section-bg").animate({ left: "-22%" }, 1000);
+      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
+      console.log(say_hello("2018")); 
+    } else {
+      $(".specific-bg-color").css("position", "unset");
+    }
   });
 }
 
@@ -790,7 +1208,7 @@ function show_18_info(ndx) {
 
 let allStackedChart, allWinsPie, allPolesPie, allFastLapsPie, 
     stackedChart, winsPie, polesPie, fastLapsPie, 
-    lineChart, qauliSpeedDemonNumber, fastLapSpeedDemon, 
+    lineChart, qualiSpeedDemonNumber, fastLapSpeedDemon, 
     oonNumberGold, oonNumberSilver, oonNumberBronze, 
     ihsNumberGold, ihsNumberSilver, ihsNumberBronze, 
     aiadNumberGold, aiadNumberSilver, aiadNumberBronze;
@@ -823,29 +1241,30 @@ function show_all_wins_pie(ndx) {
   );
 
   if(allWinsPie) {
+    allWinsPie.dimension().dispose();
     allWinsPie
       .group(group)
       .dimension(dim)
       .redraw();
   } else {
     allWinsPie = dc.pieChart("#wins-pie");
-  allWinsPie
-    .height(200)
-    .width(200)
-    .radius(100)
-    .innerRadius(40)
-    .dimension(dim)
-    .valueAccessor(function(d) {
-      if(d.value.count > 0) {
-        return d.value.match;
-      } else {
-        return 0;
-      }
-    })
-    .group(group)
-    .transitionDuration(1000);
-    
-  allWinsPie.render();
+    allWinsPie
+      .height(200)
+      .width(200)
+      .radius(100)
+      .innerRadius(40)
+      .dimension(dim)
+      .valueAccessor(function(d) {
+        if(d.value.count > 0) {
+          return d.value.match;
+        } else {
+          return 0;
+        }
+      })
+      .group(group)
+      .transitionDuration(1000);
+      
+    allWinsPie.render();
   }
 }
 
@@ -876,29 +1295,30 @@ function show_all_poles_pie(ndx) {
   );
 
   if(allPolesPie) {
+    allPolesPie.dimension().dispose();
     allPolesPie
       .group(group)
       .dimension(dim)
       .redraw();
   } else {
     allPolesPie = dc.pieChart("#poles-pie")
-  allPolesPie
-    .height(200)
-    .width(200)
-    .radius(100)
-    .innerRadius(40)
-    .dimension(dim)
-    .valueAccessor(function(d) {
-      if(d.value.count > 0) {
-        return d.value.match;
-      } else {
-        return 0;
-      }
-    })
-    .group(group)
-    .transitionDuration(1000);
-    
-  allPolesPie.render();
+    allPolesPie
+      .height(200)
+      .width(200)
+      .radius(100)
+      .innerRadius(40)
+      .dimension(dim)
+      .valueAccessor(function(d) {
+        if(d.value.count > 0) {
+          return d.value.match;
+        } else {
+          return 0;
+        }
+      })
+      .group(group)
+      .transitionDuration(1000);
+      
+    allPolesPie.render();
   }
 }
 
@@ -929,29 +1349,30 @@ function show_all_fast_laps_pie(ndx) {
   );
 
   if(allFastLapsPie) {
+    allFastLapsPie.dimension().dispose();
     allFastLapsPie
       .group(group)
       .dimension(dim)
       .redraw();
   } else {
     allFastLapsPie = dc.pieChart("#fast-laps-pie")
-  allFastLapsPie
-    .height(200)
-    .width(200)
-    .radius(100)
-    .innerRadius(40)
-    .dimension(dim)
-    .valueAccessor(function(d) {
-      if(d.value.count > 0) {
-        return d.value.match;
-      } else {
-        return 0;
-      }
-    })
-    .group(group)
-    .transitionDuration(1000);
-    
-  allFastLapsPie.render();
+    allFastLapsPie
+      .height(200)
+      .width(200)
+      .radius(100)
+      .innerRadius(40)
+      .dimension(dim)
+      .valueAccessor(function(d) {
+        if(d.value.count > 0) {
+          return d.value.match;
+        } else {
+          return 0;
+        }
+      })
+      .group(group)
+      .transitionDuration(1000);
+      
+    allFastLapsPie.render();
   }
 }
 
@@ -965,7 +1386,6 @@ function show_all_constructor_points(ndx) {
   }
   window.addEventListener('resize', resize_chart);
   
-
   var dim = ndx.dimension(dc.pluck("season")); 
     function pointsPerTeam(dimension, team_name) {
       return dimension.group().reduce(
@@ -997,6 +1417,7 @@ function show_all_constructor_points(ndx) {
   var mclPoints = pointsPerTeam(dim, "McLaren");
 
   if(allStackedChart) {
+    allStackedChart.dimension().dispose();
     allStackedChart
       .group(merPoints, "Mercedes")
       .stack(ferPoints, "Ferrari")
@@ -1008,30 +1429,30 @@ function show_all_constructor_points(ndx) {
       .redraw();
   } else {
     allStackedChart = dc.barChart("#all-constructor-points");
-  allStackedChart
-    .width(width)
-    .height(400)
-    .dimension(dim)
-    .group(merPoints, "Mercedes")
-    .stack(ferPoints, "Ferrari")
-    .stack(rbrPoints, "RBR")
-    .stack(braPoints, "Brawn GP")
-    .stack(renPoints, "Renault")
-    .stack(mclPoints, "McLaren")
-    .title(function(d) {
-      return "Hello!"; //<---------------------------------------------------RETURN ACTUAL INFO
-    })
-    .valueAccessor(function(d) {
-      return d.value.total;
-    })
-    .transitionDuration(1000)
-    .x(d3.scale.ordinal())
-    .xUnits(dc.units.ordinal)
-    .xAxisLabel("Season: 2006 - 2018")
-    .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))
-    .margins({top: 10, right: 10, bottom: 50, left: 105});
+    allStackedChart
+      .width(width)
+      .height(400)
+      .dimension(dim)
+      .group(merPoints, "Mercedes")
+      .stack(ferPoints, "Ferrari")
+      .stack(rbrPoints, "RBR")
+      .stack(braPoints, "Brawn GP")
+      .stack(renPoints, "Renault")
+      .stack(mclPoints, "McLaren")
+      .title(function(d) {
+        return "Hello!"; //<---------------------------------------------------RETURN ACTUAL INFO
+      })
+      .valueAccessor(function(d) {
+        return d.value.total;
+      })
+      .transitionDuration(1000)
+      .x(d3.scale.ordinal())
+      .xUnits(dc.units.ordinal)
+      .xAxisLabel("Season: 2006 - 2018")
+      .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))
+      .margins({top: 10, right: 10, bottom: 50, left: 105});
 
-  allStackedChart.render();
+    allStackedChart.render();
   }
 }
 
@@ -1067,29 +1488,30 @@ function show_wins_pie(ndx, season) {
   );
 
   if(winsPie) {
+    winsPie.dimension().dispose();
     winsPie
       .group(group)
       .dimension(dim)
       .redraw();
   } else {
     winsPie = dc.pieChart("#wins-pie")
-  winsPie
-    .height(200)
-    .width(200)
-    .radius(100)
-    .innerRadius(40)
-    .dimension(dim)
-    .valueAccessor(function(d) {
-      if(d.value.count > 0) {
-        return d.value.match;
-      } else {
-        return 0;
-      }
-    })
-    .group(group)
-    .transitionDuration(1000);
+    winsPie
+      .height(200)
+      .width(200)
+      .radius(100)
+      .innerRadius(40)
+      .dimension(dim)
+      .valueAccessor(function(d) {
+        if(d.value.count > 0) {
+          return d.value.match;
+        } else {
+          return 0;
+        }
+      })
+      .group(group)
+      .transitionDuration(1000);
 
-  winsPie.render();
+    winsPie.render();
   }
 }
 
@@ -1124,29 +1546,30 @@ function show_poles_pie(ndx, season) {
   );
 
   if(polesPie) {
+    polesPie.dimension().dispose();
     polesPie
-    .group(group)
-    .dimension(dim)
-    .redraw();
+      .group(group)
+      .dimension(dim)
+      .redraw();
   } else {
     polesPie = dc.pieChart("#poles-pie")
-  polesPie
-    .height(200)
-    .width(200)
-    .radius(100)
-    .innerRadius(40)
-    .dimension(dim)
-    .valueAccessor(function(d) {
-      if(d.value.count > 0) {
-        return d.value.match;
-      } else {
-        return 0;
-      }
-    })
-    .group(group)
-    .transitionDuration(1000);
+    polesPie
+      .height(200)
+      .width(200)
+      .radius(100)
+      .innerRadius(40)
+      .dimension(dim)
+      .valueAccessor(function(d) {
+        if(d.value.count > 0) {
+          return d.value.match;
+        } else {
+          return 0;
+        }
+      })
+      .group(group)
+      .transitionDuration(1000);
 
-  polesPie.render();
+    polesPie.render();
   }
 }
 
@@ -1181,29 +1604,30 @@ function show_fast_laps_pie(ndx, season) {
   );
 
   if(fastLapsPie) {
+    fastLapsPie.dimension().dispose();
     fastLapsPie
       .group(group)
       .dimension(dim)
       .redraw();
   } else {
     fastLapsPie = dc.pieChart("#fast-laps-pie")
-  fastLapsPie
-    .height(200)
-    .width(200)
-    .radius(100)
-    .innerRadius(40)
-    .dimension(dim)
-    .valueAccessor(function(d) {
-      if(d.value.count > 0) {
-        return d.value.match;
-      } else {
-        return 0;
-      }
-    })
-    .group(group)
-    .transitionDuration(1000);
+    fastLapsPie
+      .height(200)
+      .width(200)
+      .radius(100)
+      .innerRadius(40)
+      .dimension(dim)
+      .valueAccessor(function(d) {
+        if(d.value.count > 0) {
+          return d.value.match;
+        } else {
+          return 0;
+        }
+      })
+      .group(group)
+      .transitionDuration(1000);
 
-  fastLapsPie.render();
+    fastLapsPie.render();
   }
 }
 
@@ -1257,41 +1681,44 @@ function show_points(ndx, season) {
   var merPoints = pointsPerTeam(dim, "Mercedes");
 
   if(stackedChart) {
+    stackedChart.dimension().dispose();
     stackedChart
-    .group(ferPoints, "Ferrari")
-    .stack(renPoints, "Renault")
-    .stack(braPoints, "Brawn GP")
-    .stack(mclPoints, "McLaren")
-    .stack(rbrPoints, "RBR")
-    .stack(merPoints, "Mercedes")
-    .redraw();
+      .group(ferPoints, "Ferrari")
+      .stack(renPoints, "Renault")
+      .stack(braPoints, "Brawn GP")
+      .stack(mclPoints, "McLaren")
+      .stack(rbrPoints, "RBR")
+      .stack(merPoints, "Mercedes")
+      .redraw();
   } else {
     stackedChart = dc.barChart("#all-constructor-points");
-  stackedChart
-    .width(width)
-    .height(400)
-    .dimension(dim)
-    .group(ferPoints, "Ferrari")
-    .stack(renPoints, "Renault")
-    .stack(braPoints, "Brawn GP")
-    .stack(mclPoints, "McLaren")
-    .stack(rbrPoints, "RBR")
-    .stack(merPoints, "Mercedes")
-    .valueAccessor(function(d) {
-      if(d.total === 0) {
-        return 0;
-      } else {
-        return d.value.total; //try to return keys rather: "Team scored n points in x country"
-      }
-    })
-    .transitionDuration(1000)
-    .x(d3.scale.ordinal())
-    .xUnits(dc.units.ordinal)
-    .xAxisLabel("Race number")
-    .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))
-    .margins({top: 10, right: 10, bottom: 50, left: 105});
+    stackedChart
+      .width(width)
+      .height(400)
+      .dimension(dim)
+      .group(ferPoints, "Ferrari")
+      .stack(renPoints, "Renault")
+      .stack(braPoints, "Brawn GP")
+      .stack(mclPoints, "McLaren")
+      .stack(rbrPoints, "RBR")
+      .stack(merPoints, "Mercedes")
+      .valueAccessor(function(d) {
+        if(d.total === 0) {
+          return 0;
+        } else {
+          return d.value.total; //try to return keys rather: "Team scored n points in x country"
+        }
+      })
+      .transitionDuration(1000)
+      .x(d3.scale.ordinal())
+      .xUnits(dc.units.ordinal)
+      .xAxisLabel("Race number")
+      .elasticY(true)
+      .elasticX(true)
+      .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))
+      .margins({top: 10, right: 10, bottom: 50, left: 105});
 
-  stackedChart.render();
+    stackedChart.render();
   }
 }
 
@@ -1340,30 +1767,33 @@ function show_driver_world_champ_chart(ndx, season, driver) {
   var champGroup = champ_points(dim, driver);
 
   if(lineChart) {
+    lineChart.dimension().dispose();
     lineChart
       .group(champGroup)
       .dimension(dim)
       .redraw();
   } else {
     lineChart = dc.lineChart("#driver-world-champ");
-  lineChart
-    .width(width)
-    .height(300)
-    .dimension(dim)
-    .group(champGroup)
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      return d.value.total;
-    })
-    .x(d3.scale.ordinal())
-    .xUnits(dc.units.ordinal)
-    .yAxisLabel("Points")
-    .xAxisLabel("Race Number")
-    .margins({top: 20, right: 20, bottom: 50, left: 35})
-    .renderHorizontalGridLines(true)
-    .yAxis().ticks(5);
+    lineChart
+      .width(width)
+      .height(300)
+      .dimension(dim)
+      .group(champGroup)
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        return d.value.total;
+      })
+      .x(d3.scale.ordinal())
+      .xUnits(dc.units.ordinal)
+      .yAxisLabel("Points")
+      .xAxisLabel("Race Number")
+      .elasticY(true)
+      .elasticX(true)
+      .margins({top: 20, right: 20, bottom: 50, left: 35})
+      .renderHorizontalGridLines(true)
+      .yAxis().ticks(5);
 
-  lineChart.render();
+    lineChart.render();
   }
 }
 
@@ -1395,21 +1825,21 @@ function show_quali_speed_demon(ndx, season, driver, element) {
     }
   );
 
-  if(qauliSpeedDemonNumber) {
-    qauliSpeedDemonNumber
+  if(qualiSpeedDemonNumber) {
+    qualiSpeedDemonNumber
       .group(group)
       .redraw();
   } else {
-    qauliSpeedDemonNumber = dc.numberDisplay(element)
-  qauliSpeedDemonNumber
-    .formatNumber(d3.format("0"))
-    .transitionDuration(0.00000000001)
-    .valueAccessor(function(d) {
-      return `${d.average_speed.toFixed(0)}`;
-    })
-    .group(group);
+    qualiSpeedDemonNumber = dc.numberDisplay(element)
+    qualiSpeedDemonNumber
+      .formatNumber(d3.format("0"))
+      .transitionDuration(0.00000000001)
+      .valueAccessor(function(d) {
+        return `${d.average_speed.toFixed(0)}`;
+      })
+      .group(group);
 
-  qauliSpeedDemonNumber.render();
+    qualiSpeedDemonNumber.render();
   }
 }
 
@@ -1447,15 +1877,15 @@ function show_fast_lap_speed_demon(ndx, season, driver, element) {
       .redraw();
   } else {
     fastLapSpeedDemon = dc.numberDisplay(element)
-  fastLapSpeedDemon
-    .formatNumber(d3.format("0"))
-    .transitionDuration(0.00000000001)
-    .valueAccessor(function(d) {
-      return `${d.average_speed.toFixed(0)}`;
-    })
-    .group(group);
+    fastLapSpeedDemon
+      .formatNumber(d3.format("0"))
+      .transitionDuration(0.00000000001)
+      .valueAccessor(function(d) {
+        return `${d.average_speed.toFixed(0)}`;
+      })
+      .group(group);
 
-  fastLapSpeedDemon.render();
+    fastLapSpeedDemon.render();
   }
 }
 
@@ -1490,19 +1920,19 @@ function show_out_of_nowhere_percentage_gold(ndx, season, driver, element) {
       .redraw();
   } else {
     oonNumberGold = dc.numberDisplay(element)
-  oonNumberGold
-    .formatNumber(d3.format(".2%"))
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return (d.no_pole / d.count);
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    oonNumberGold
+      .formatNumber(d3.format(".2%"))
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return (d.no_pole / d.count);
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  oonNumberGold.render();
+    oonNumberGold.render();
   }
 }
 
@@ -1537,19 +1967,19 @@ function show_out_of_nowhere_percentage_silver(ndx, season, driver, element) {
       .redraw();
   } else {
     oonNumberSilver = dc.numberDisplay(element)
-  oonNumberSilver
-    .formatNumber(d3.format(".2%"))
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return (d.no_pole / d.count);
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    oonNumberSilver
+      .formatNumber(d3.format(".2%"))
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return (d.no_pole / d.count);
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  oonNumberSilver.render();
+    oonNumberSilver.render();
   }
 }
 
@@ -1584,19 +2014,19 @@ function show_out_of_nowhere_percentage_bronze(ndx, season, driver, element) {
       .redraw();
   } else {
     oonNumberBronze = dc.numberDisplay(element)
-  oonNumberBronze
-    .formatNumber(d3.format(".2%"))
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return (d.no_pole / d.count);
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    oonNumberBronze
+      .formatNumber(d3.format(".2%"))
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return (d.no_pole / d.count);
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  oonNumberBronze.render();
+    oonNumberBronze.render();
   }
 }
 
@@ -1631,19 +2061,19 @@ function show_in_his_stride_percentage_gold(ndx, season, driver, element) {
       .redraw();
   } else {
     ihsNumberGold = dc.numberDisplay(element)
-  ihsNumberGold
-    .formatNumber(d3.format(".2%"))
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return (d.pole / d.count);
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    ihsNumberGold
+      .formatNumber(d3.format(".2%"))
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return (d.pole / d.count);
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  ihsNumberGold.render();
+    ihsNumberGold.render();
   }
 }
 
@@ -1678,19 +2108,19 @@ function show_in_his_stride_percentage_silver(ndx, season, driver, element) {
       .redraw();
   } else {
     ihsNumberSilver = dc.numberDisplay(element)
-  ihsNumberSilver
-    .formatNumber(d3.format(".2%"))
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return (d.pole / d.count);
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    ihsNumberSilver
+      .formatNumber(d3.format(".2%"))
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return (d.pole / d.count);
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  ihsNumberSilver.render();
+    ihsNumberSilver.render();
   }
 }
 
@@ -1725,19 +2155,19 @@ function show_in_his_stride_percentage_bronze(ndx, season, driver, element) {
       .redraw();
   } else {
     ihsNumberBronze = dc.numberDisplay(element)
-  ihsNumberBronze
-    .formatNumber(d3.format(".2%"))
-    .transitionDuration(1000)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return (d.pole / d.count);
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    ihsNumberBronze
+      .formatNumber(d3.format(".2%"))
+      .transitionDuration(1000)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return (d.pole / d.count);
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  ihsNumberBronze.render();
+    ihsNumberBronze.render();
   }
 }
 
@@ -1772,19 +2202,19 @@ function show_all_in_a_day_number_gold(ndx, season, driver, element) {
       .redraw();
   } else {
     aiadNumberGold = dc.numberDisplay(element)
-  aiadNumberGold
-    .formatNumber(d3.format(".0"))
-    .transitionDuration(0.00000000001)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return d.pole_and_fast_lap;
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    aiadNumberGold
+      .formatNumber(d3.format(".0"))
+      .transitionDuration(0.00000000001)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return d.pole_and_fast_lap;
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  aiadNumberGold.render();
+    aiadNumberGold.render();
   }
 }
 
@@ -1819,19 +2249,19 @@ function show_all_in_a_day_number_silver(ndx, season, driver, element) {
       .redraw();
   } else {
     aiadNumberSilver = dc.numberDisplay(element)
-  aiadNumberSilver
-    .formatNumber(d3.format(".0"))
-    .transitionDuration(0.00000000001)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return d.pole_and_fast_lap;
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    aiadNumberSilver
+      .formatNumber(d3.format(".0"))
+      .transitionDuration(0.00000000001)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return d.pole_and_fast_lap;
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  aiadNumberSilver.render();
+    aiadNumberSilver.render();
   }
 }
 
@@ -1866,19 +2296,19 @@ function show_all_in_a_day_number_bronze(ndx, season, driver, element) {
       .redraw();
   } else {
     aiadNumberBronze = dc.numberDisplay(element)
-  aiadNumberBronze
-    .formatNumber(d3.format(".0"))
-    .transitionDuration(0.00000000001)
-    .valueAccessor(function(d) {
-      if(d.count > 0) {
-        return d.pole_and_fast_lap;
-      } else {
-        return 0;
-      }
-    })
-    .group(group);
+    aiadNumberBronze
+      .formatNumber(d3.format(".0"))
+      .transitionDuration(0.00000000001)
+      .valueAccessor(function(d) {
+        if(d.count > 0) {
+          return d.pole_and_fast_lap;
+        } else {
+          return 0;
+        }
+      })
+      .group(group);
 
-  aiadNumberBronze.render();
+    aiadNumberBronze.render();
   }
 }
 
