@@ -518,13 +518,19 @@ function makeGraphs(error, data) {
   });
 
   show_all_info(ndx);
+
+  //------------------------------------------------------Custom jQuery start
   
   $("#nav-toggle").click(function() {
     $(".nav-buttons").slideToggle(500, "swing");
   });
 
   d3.select("#all-seasons").on('click.foo', function() {
-    show_all_info(ndx);
+    //prevents the anchor tags from jumping to the top of the screen
+    event.preventDefault(); 
+    //calls graphs/charts, etc.
+    show_all_info(ndx); 
+    //determines current screen size and how to react to it
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "0%" }, 1000);
       $(".specific-bg-color").animate({ right: "0%" }, 1000);
@@ -535,6 +541,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-06").on('click.foo', function() {
+    event.preventDefault();
     show_06_info(ndx);
     $("#world-champ").html("Fernando Alonso ");
     $("#sealed-at").html("Race 18: Brazil ");
@@ -567,6 +574,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-07").on('click.foo', function() {
+    event.preventDefault();
     show_07_info(ndx);
     $("#world-champ").html("Kimi Raikkonen ");
     $("#sealed-at").html("Race 17: Brazil ");
@@ -599,6 +607,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-08").on('click.foo', function() {
+    event.preventDefault();
     show_08_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 18: Brazil ");
@@ -631,6 +640,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-09").on('click.foo', function() {
+    event.preventDefault();
     show_09_info(ndx);
     $("#world-champ").html("Jenson Button ");
     $("#sealed-at").html("Race 16: Brazil ");
@@ -662,6 +672,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-10").on('click.foo', function() {
+    event.preventDefault();
     show_10_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 19: Abu Dhabi ");
@@ -693,6 +704,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-11").on('click.foo', function() {
+    event.preventDefault();
     show_11_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 15: Japan ");
@@ -724,6 +736,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-12").on('click.foo', function() {
+    event.preventDefault();
     show_12_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 20: Brazil ");
@@ -757,6 +770,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-13").on('click.foo', function() {
+    event.preventDefault();
     show_13_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 16: India ");
@@ -790,6 +804,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-14").on('click.foo', function() {
+    event.preventDefault();
     show_14_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 19: Abu Dhabi ");
@@ -822,6 +837,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-15").on('click.foo', function() {
+    event.preventDefault();
     show_15_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 16: USA ");
@@ -856,6 +872,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-16").on('click.foo', function() {
+    event.preventDefault();
     show_16_info(ndx);
     $("#world-champ").html("Nico Rosberg ");
     $("#sealed-at").html("Race 21: Abu Dhabi ");
@@ -889,6 +906,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-17").on('click.foo', function() {
+    event.preventDefault();
     show_17_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 18: Mexico ");
@@ -923,6 +941,7 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#s-18").on('click.foo', function() {
+    event.preventDefault();
     show_18_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 19: Mexico ");
@@ -953,6 +972,8 @@ function makeGraphs(error, data) {
       $(".specific-bg-color").css("position", "unset");
     }
   });
+
+  //------------------------------------------------------Custom jQuery end
 }
 
 //silly greeting on jquery buttons to confirm the event has been triggered
@@ -961,6 +982,7 @@ function say_hello(year) {
 }
 
 //********************************************************ALL INFO FUNCTION CALLS */
+
 function show_all_info(ndx) {
   show_all_wins_pie(ndx);
   show_all_poles_pie(ndx);
