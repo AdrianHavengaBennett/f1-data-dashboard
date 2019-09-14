@@ -70,7 +70,8 @@ section {
 
 .btn {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-size: 0.5em;
 }
 
 .all-color {
@@ -306,11 +307,6 @@ section {
   margin-left: -25px;
 }
 
-.movers-losers {
-  font-family: "Lora", sans-serif;
-  width: 100%;
-}
-
 #season-speed-demon {
   padding-bottom: 1.5em;
 }
@@ -348,6 +344,29 @@ table {
 
 .bronze i {
   color: #A15D33;
+}
+
+.fa-question-circle {
+  position: relative;
+}
+
+.fa-times {
+  position: relative;
+}
+
+.info {
+    position: absolute;
+    display: none;
+    border: 1px solid #3D3D3D;
+    border-radius: 4px;
+    background-color: white;
+    color: #3D3D3D;
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    width: 12em;
+    left: -11.75em;
+    top: -2.75em;
+    padding: 4px;
 }
 
 /*-----------------------------------------------------------Media Queries*/
@@ -401,6 +420,9 @@ table {
 }
 
 @media (min-width: 768px) {
+  .btn {
+    font-size: 1em;
+  }
   #title_1 {
     font-size: 2em;
     padding-top: 10px;
