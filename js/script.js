@@ -531,14 +531,14 @@ function makeGraphs(error, data) {
   });
 
   d3.select("#all-seasons").on("click.foo", function() {
-    //prevents the anchor tags from jumping to the top of the screen
+    //prevents the anchor tags, once clicked, from jumping to the top of the screen
     event.preventDefault(); 
     //calls graphs/charts, etc.
     show_all_info(ndx); 
     //determines current screen size and how to react to it
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "0%" }, 1000);
-      $(".specific-bg-color").animate({ right: "0%" }, 1000);
+      $(".specific-bg-color").css("z-index", "-1").animate({ right: "0%" }, 1000);
       console.log(say_hello("All"));
     } else {
       $(".specific-bg-color").css("position", "absolute");
@@ -574,13 +574,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Kimi Raikkonen");
 
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2006")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2006");
   });
 
   d3.select("#s-07").on("click.foo", function() {
@@ -611,13 +605,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Kimi Raikkonen");
 
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2007")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2007");
   });
 
   d3.select("#s-08").on("click.foo", function() {
@@ -648,13 +636,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Heikki Kovalainen");
 
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2008")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2008");
   });
 
   d3.select("#s-09").on("click.foo", function() {
@@ -684,13 +666,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Sebastian Vettel");
 
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2009")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2009");
   });
 
   d3.select("#s-10").on("click.foo", function() {
@@ -719,13 +695,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Fernando Alonso: ");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2010")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2010");
   });
 
   d3.select("#s-11").on("click.foo", function() {
@@ -752,13 +722,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Lewis Hamilton");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2011")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2011");
   });
 
   d3.select("#s-12").on("click.foo", function() {
@@ -787,13 +751,7 @@ function makeGraphs(error, data) {
     
     $("#sd-driver").html("Jenson Button");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2012")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2012");
   });
 
   d3.select("#s-13").on("click.foo", function() {
@@ -822,13 +780,7 @@ function makeGraphs(error, data) {
     
     $("#sd-driver").html("Lewis Hamilton");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2013")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2013");
   });
 
   d3.select("#s-14").on("click.foo", function() {
@@ -856,13 +808,7 @@ function makeGraphs(error, data) {
     
     $("#sd-driver").html("Nico Rosberg");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2014")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2014");
   });
 
   d3.select("#s-15").on("click.foo", function() {
@@ -892,13 +838,7 @@ function makeGraphs(error, data) {
 
     $("#sd-driver").html("Lewis Hamilton");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2015")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2015");
   });
 
   d3.select("#s-16").on("click.foo", function() {
@@ -927,13 +867,7 @@ function makeGraphs(error, data) {
     
     $("#sd-driver").html("Lewis Hamilton");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2016")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2016");
   });
 
   d3.select("#s-17").on("click.foo", function() {
@@ -963,13 +897,7 @@ function makeGraphs(error, data) {
     
     $("#sd-driver").html("Valtteri Bottas");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2017")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2017");
   });
 
   d3.select("#s-18").on("click.foo", function() {
@@ -997,21 +925,10 @@ function makeGraphs(error, data) {
     
     $("#sd-driver").html("Kimi Raikkonen");
     
-    if(window.matchMedia('(min-width: 1024px)').matches) {
-      $(".section-bg").animate({ left: "-22%" }, 1000);
-      $(".specific-bg-color").animate({ right: "-50%" }, 1000);
-      console.log(say_hello("2018")); 
-    } else {
-      $(".specific-bg-color").css("position", "unset");
-    }
+    resolution_checker_and_div_animator("2018");
   });
 
   //------------------------------------------------------Custom jQuery end
-}
-
-//silly greeting on jquery buttons to confirm the event has been triggered
-function say_hello(year) {
-  return `Hello, ${year}!`;
 }
 
 //********************************************************ALL INFO FUNCTION CALLS */
@@ -1261,6 +1178,25 @@ function show_18_info(ndx) {
   show_fast_lap_speed_demon(ndx, "18", "Kimi Raikkonen", "#sd-fast-laps");
 }
 
+//silly greeting on jquery buttons to confirm the event has been triggered
+function say_hello(year) {
+  return `Hello, ${year}!`;
+}
+
+//determines current screen size and how to react to it
+function resolution_checker_and_div_animator(year) {
+  if(window.matchMedia('(min-width: 1024px)').matches) {
+    $(".section-bg").animate({ left: "-22%" }, 1000);
+    $(".specific-bg-color").animate({ right: "-50%" }, 1000).queue(function(next) {
+                                                                    $(this).css("z-index", "0");
+                                                                    next();
+                                                                  });
+    console.log(say_hello(year)); 
+  } else {
+    $(".specific-bg-color").css("position", "unset");
+  }
+}
+
 let stackedChart, winsPie, polesPie, fastLapsPie, 
     lineChart, qualiSpeedDemonNumber, fastLapSpeedDemon, 
     oonNumberGold, oonNumberSilver, oonNumberBronze, 
@@ -1502,7 +1438,6 @@ function show_all_constructor_points(ndx) {
       .transitionDuration(1000)
       .x(d3.scale.ordinal())
       .xUnits(dc.units.ordinal)
-      .xAxisLabel("Season: 2006 - 2018")
       .elasticX(true)
       .elasticY(true)
       .legend(dc.legend().x(10).y(10).itemHeight(10).gap(5))

@@ -72,6 +72,7 @@ Below are the steps I have taken to achieve this:
 
 ## Credits
 Special thanks goes out to https://stackoverflow.com/users/676195/gordon for clarifying dc.js/event listener issue.
+Credit to https://stackoverflow.com/users/195594/ken-redler for explaining how delay() works with css properties.
 
 All flag icons courtesy of https://github.com/lipis/flag-icon-css
 
