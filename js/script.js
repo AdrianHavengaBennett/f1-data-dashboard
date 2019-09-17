@@ -551,29 +551,15 @@ function makeGraphs(error, data) {
     $("#world-champ").html("Fernando Alonso ");
     $("#sealed-at").html("Race 18: Brazil ");
     //remove all other flags before adding correct one
-    $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-es ");
+    set_champ_flag("flag-icon-es");
     //remove all other flags before adding correct one
-    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
-
-    $("#oon-gold-driver").html("Jenson Button: ");
-    $("#oon-silver-driver").html("Michael Schumacher: ");
-    $("#oon-bronze-driver").html("Fernando Alonso: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Felipe Massa: ");
-    $("#ihs-silver-driver").html("Fernando Alonso: ");
-    $("#ihs-bronze-driver").html("Michael Schumacher: ");
-
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Michael Schumacher: ");
-    $("#aiad-silver-driver").html("Fernando Alonso: ");
-
+    set_sealed_at_flag("flag-icon-br");
+    out_of_nowhere_driver_selector("Jenson Button", "Michael Schumacher", "Fernando Alonso");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Felipe Massa", "Fernando Alonso", "Michael Schumacher");
+    all_in_a_day_hide_bronze();
+    all_in_a_day_driver_selector("Michael Schumacher", "Fernando Alonso", "N/A");
     $("#sd-driver").html("Kimi Raikkonen");
-
     resolution_checker_and_div_animator("2006");
   });
 
@@ -582,29 +568,14 @@ function makeGraphs(error, data) {
     show_07_info(ndx);
     $("#world-champ").html("Kimi Raikkonen ");
     $("#sealed-at").html("Race 17: Brazil ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-gb").removeClass("flag-icon-de").addClass("flag-icon-fi ");
-    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
-
-    $("#oon-gold-driver").html("Kimi Raikkonen: ");
-    $("#oon-silver-driver").html("Fernando Alonso: ");
-    $("#oon-bronze-driver").html("Lewis Hamilton: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Lewis Hamilton: ");
-    $("#ihs-silver-driver").html("Felipe Massa: ");
-    $("#ihs-bronze-driver").html("Kimi Raikkonen: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").show();
-    $("#aiad-gold-driver").html("Fernando Alonso: ");
-    $("#aiad-silver-driver").html("Felipe Massa: ");
-    $("#aiad-bronze-driver").html("Lewis Hamilton: ");
-
+    set_champ_flag("flag-icon-fi");
+    set_sealed_at_flag("flag-icon-br");
+    out_of_nowhere_driver_selector("Kimi Raikkonen", "Fernando Alonso", "Lewis Hamilton");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Lewis Hamilton", "Felipe Massa", "Kimi Raikkonen");
+    all_in_a_day_show_all();
+    all_in_a_day_driver_selector("Fernando Alonso", "Felipe Massa", "Lewis Hamilton");
     $("#sd-driver").html("Kimi Raikkonen");
-
     resolution_checker_and_div_animator("2007");
   });
 
@@ -613,29 +584,14 @@ function makeGraphs(error, data) {
     show_08_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 18: Brazil ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
-    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
-
-    $("#oon-gold-driver").html("Fernando Alonso: ");
-    $("#oon-silver-driver").html("Felipe Massa: ");
-    $("#oon-bronze-driver").html("Lewis Hamilton: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Sebastian Vettel: ");
-    $("#ihs-silver-driver").html("Lewis Hamilton: ");
-    $("#ihs-bronze-driver").html("Felipe Massa: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").show();
-    $("#aiad-gold-driver").html("Felipe Massa: ");
-    $("#aiad-silver-driver").html("Lewis Hamilton: ");
-    $("#aiad-bronze-driver").html("Kimi Raikkonen: ");
-
+    set_champ_flag("flag-icon-gb");
+    set_sealed_at_flag("flag-icon-br");
+    out_of_nowhere_driver_selector("Fernando Alonso", "Felipe Massa", "Lewis Hamilton");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Sebastian Vettel", "Lewis Hamilton", "Felipe Massa");
+    all_in_a_day_show_all();
+    all_in_a_day_driver_selector("Felipe Massa", "Lewis Hamilton", "Kimi Raikkonen");
     $("#sd-driver").html("Heikki Kovalainen");
-
     resolution_checker_and_div_animator("2008");
   });
 
@@ -644,28 +600,14 @@ function makeGraphs(error, data) {
     show_09_info(ndx);
     $("#world-champ").html("Jenson Button ");
     $("#sealed-at").html("Race 16: Brazil ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
-    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
-
-    $("#oon-gold-driver").html("Rubens Barrichello: ");
-    $("#oon-silver-driver").html("Kimi Raikkonen: ");
-    $("#oon-bronze-driver").html("Lewis Hamilton: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Sebastian Vettel: ");
-    $("#ihs-silver-driver").html("Jenson Button: ");
-    $("#ihs-bronze-driver").html("Lewis Hamilton: ");
-
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Jenson Button: ");
-    $("#aiad-silver-driver").html("Sebastian Vettel: ");
-
+    set_champ_flag("flag-icon-gb");
+    set_sealed_at_flag("flag-icon-br");
+    out_of_nowhere_driver_selector("Rubens Barrichello", "Kimi Raikkonen", "Lewis Hamilton");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Sebastian Vettel", "Jenson Button", "Lewis Hamilton");
+    all_in_a_day_hide_bronze();
+    all_in_a_day_driver_selector("Jenson Button", "Sebastian Vettel", "N/A");
     $("#sd-driver").html("Sebastian Vettel");
-
     resolution_checker_and_div_animator("2009");
   });
 
@@ -674,27 +616,14 @@ function makeGraphs(error, data) {
     show_10_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 19: Abu Dhabi ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
-    
-    $("#oon-gold-driver").html("Jenson Button: ");
-    $("#oon-silver-driver").html("Lewis Hamilton: ");
-    $("#oon-bronze-driver").html("Fernando Alonso: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Sebastian Vettel: ");
-    $("#ihs-silver-driver").html("Mark Webber: ");
-    $("#ihs-bronze-driver").html("Fernando Alonso: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").hide();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Fernando Alonso: ");
-
+    set_champ_flag("flag-icon-de");
+    set_sealed_at_flag("flag-icon-ae");
+    out_of_nowhere_driver_selector("Jenson Button", "Lewis Hamilton", "Fernando Alonso");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Sebastian Vettel", "Mark Webber", "Fernando Alonso");
+    all_in_a_day_show_gold_only();
+    all_in_a_day_driver_selector("Fernando Alonso", "N/A", "N/A");
     $("#sd-driver").html("Fernando Alonso: ");
-    
     resolution_checker_and_div_animator("2010");
   });
 
@@ -703,25 +632,14 @@ function makeGraphs(error, data) {
     show_11_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 15: Japan ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-ae").removeClass("flag-icon-in").addClass("flag-icon-jp ");
-    
-    $("#oon-gold-driver").html("Jenson Button: ");
-    $("#oon-silver-driver").html("Lewis Hamilton: ");
-    $("#oon-bronze-driver").html("Mark Webber: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").hide();
-    $("#in-his-stride-bronze").hide();
-    $("#ihs-gold-driver").html("Sebastian Vettel: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").hide();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Sebastian Vettel: ");
-
+    set_champ_flag("flag-icon-de");
+    set_sealed_at_flag("flag-icon-jp");
+    out_of_nowhere_driver_selector("Jenson Button", "Lewis Hamilton", "Mark Webber");
+    in_his_stride_show_gold_only();
+    in_his_stride_driver_selector("Sebastian Vettel", "N/A", "N/A");
+    all_in_a_day_show_gold_only();
+    all_in_a_day_driver_selector("Sebastian Vettel", "N/A", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    
     resolution_checker_and_div_animator("2011");
   });
 
@@ -730,27 +648,14 @@ function makeGraphs(error, data) {
     show_12_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 20: Brazil ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
-    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
-    
-    $("#oon-gold-driver").html("Mark Webber: ");
-    $("#oon-silver-driver").html("Kimi Raikkonen: ");
-    $("#oon-bronze-driver").html("Pastor Maldonado: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Nico Rosberg: ");
-    $("#ihs-silver-driver").html("Sebastian Vettel: ");
-    $("#ihs-bronze-driver").html("Lewis Hamilton: ");
-
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").hide();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Sebastian Vettel: ");
-    
+    set_champ_flag("flag-icon-de");
+    set_sealed_at_flag("flag-icon-br");
+    out_of_nowhere_driver_selector("Mark Webber", "Kimi Raikkonen", "Pastor Maldonado");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Nico Rosberg", "Sebastian Vettel", "Lewis Hamilton");
+    all_in_a_day_show_gold_only();
+    all_in_a_day_driver_selector("Sebastian Vettel", "N/A", "N/A");
     $("#sd-driver").html("Jenson Button");
-    
     resolution_checker_and_div_animator("2012");
   });
 
@@ -759,27 +664,14 @@ function makeGraphs(error, data) {
     show_13_info(ndx);
     $("#world-champ").html("Sebastian Vettel ");
     $("#sealed-at").html("Race 16: India ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
-    $("#country-flag").removeClass("flag-icon-ae").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-br").addClass("flag-icon-in ");
-    
-    $("#oon-gold-driver").html("Fernando Alonso: ");
-    $("#oon-silver-driver").html("Kimi Raikkonen: ");
-    $("#oon-bronze-driver").html("Nico Rosberg: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Lewis Hamilton: ");
-    $("#ihs-silver-driver").html("Sebastian Vettel: ");
-    $("#ihs-bronze-driver").html("Nico Rosberg: ");
-
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").hide();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Sebastian Vettel: ");
-    
+    set_champ_flag("flag-icon-de");
+    set_sealed_at_flag("flag-icon-in");
+    out_of_nowhere_driver_selector("Fernando Alonso", "Kimi Raikkonen", "Nico Rosberg");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Lewis Hamilton", "Sebastian Vettel", "Nico Rosberg");
+    all_in_a_day_show_gold_only();
+    all_in_a_day_driver_selector("Sebastian Vettel", "N/A", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    
     resolution_checker_and_div_animator("2013");
   });
 
@@ -788,26 +680,14 @@ function makeGraphs(error, data) {
     show_14_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 19: Abu Dhabi ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
-    
-    $("#oon-gold-driver").html("Daniel Ricciardo: ");
-    $("#oon-silver-driver").html("Lewis Hamilton: ");
-    $("#oon-bronze-driver").html("Nico Rosberg: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").hide();
-    $("#ihs-gold-driver").html("Nico Rosberg: ");
-    $("#ihs-silver-driver").html("Lewis Hamilton: ");
-
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").hide();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Lewis Hamilton: ");
-    
+    set_champ_flag("flag-icon-gb");
+    set_sealed_at_flag("flag-icon-ae");
+    out_of_nowhere_driver_selector("Daniel Ricciardo", "Lewis Hamilton", "Nico Rosberg");
+    in_his_stride_hide_bronze();
+    in_his_stride_driver_selector("Nico Rosberg", "Lewis Hamilton", "N/A");
+    all_in_a_day_show_gold_only();
+    all_in_a_day_driver_selector("Lewis Hamilton", "N/A", "N/A");
     $("#sd-driver").html("Nico Rosberg");
-    
     resolution_checker_and_div_animator("2014");
   });
 
@@ -816,28 +696,14 @@ function makeGraphs(error, data) {
     show_15_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 16: USA ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-ae").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-us ");
-    
-    $("#oon-gold-driver").html("Sebastian Vettel: ");
-    $("#oon-silver-driver").html("Nico Rosberg: ");
-    $("#oon-bronze-driver").html("Lewis Hamilton: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Lewis Hamilton: ");
-    $("#ihs-silver-driver").html("Nico Rosberg: ");
-    $("#ihs-bronze-driver").html("Sebastian Vettel: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Lewis Hamilton: ");
-    $("#aiad-silver-driver").html("Nico Rosberg: ");
-
+    set_champ_flag("flag-icon-gb");
+    set_sealed_at_flag("flag-icon-us");
+    out_of_nowhere_driver_selector("Sebastian Vettel", "Nico Rosberg", "Lewis Hamilton");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Lewis Hamilton", "Nico Rosberg", "Sebastian Vettel");
+    all_in_a_day_hide_bronze();
+    all_in_a_day_driver_selector("Lewis Hamilton", "Nico Rosberg", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    
     resolution_checker_and_div_animator("2015");
   });
 
@@ -846,27 +712,14 @@ function makeGraphs(error, data) {
     show_16_info(ndx);
     $("#world-champ").html("Nico Rosberg ");
     $("#sealed-at").html("Race 21: Abu Dhabi ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-gb").addClass("flag-icon-de ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-mx").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
-    
-    $("#oon-gold-driver").html("Daniel Ricciardo: ");
-    $("#oon-silver-driver").html("Max Verstappen: ");
-    $("#oon-bronze-driver").html("Nico Rosberg: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").hide();
-    $("#ihs-gold-driver").html("Lewis Hamilton: ");
-    $("#ihs-silver-driver").html("Nico Rosberg: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Nico Rosberg: ");
-    $("#aiad-silver-driver").html("Lewis Hamilton: ");
-    
+    set_champ_flag("flag-icon-de");
+    set_sealed_at_flag("flag-icon-ae");
+    out_of_nowhere_driver_selector("Daniel Ricciardo", "Max Verstappen", "Nico Rosberg");
+    in_his_stride_hide_bronze();
+    in_his_stride_driver_selector("Lewis Hamilton", "Nico Rosberg", "N/A");
+    all_in_a_day_hide_bronze();
+    all_in_a_day_driver_selector("Nico Rosberg", "Lewis Hamilton", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    
     resolution_checker_and_div_animator("2016");
   });
 
@@ -875,28 +728,14 @@ function makeGraphs(error, data) {
     show_17_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 18: Mexico ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-mx ");
-    
-    $("#oon-gold-driver").html("Max Verstappen: ");
-    $("#oon-silver-driver").html("Daniel Ricciardo: ");
-    $("#oon-bronze-driver").html("Sebastian Vettel: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Lewis Hamilton: ");
-    $("#ihs-silver-driver").html("Valtteri Bottas: ");
-    $("#ihs-bronze-driver").html("Sebastian Vettel: ");
-    
-    $("#all-in-a-day-gold").show();
-    $("#all-in-a-day-silver").show();
-    $("#all-in-a-day-bronze").hide();
-    $("#aiad-gold-driver").html("Lewis Hamilton: ");
-    $("#aiad-silver-driver").html("Valtteri Bottas: ");
-    
+    set_champ_flag("flag-icon-gb");
+    set_sealed_at_flag("flag-icon-mx");
+    out_of_nowhere_driver_selector("Max Verstappen", "Daniel Ricciardo", "Sebastian Vettel");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Lewis Hamilton", "Valtteri Bottas", "Sebastian Vettel");
+    all_in_a_day_hide_bronze();
+    all_in_a_day_driver_selector("Lewis Hamilton", "Valtteri Bottas", "N/A");
     $("#sd-driver").html("Valtteri Bottas");
-    
     resolution_checker_and_div_animator("2017");
   });
 
@@ -905,31 +744,17 @@ function makeGraphs(error, data) {
     show_18_info(ndx);
     $("#world-champ").html("Lewis Hamilton ");
     $("#sealed-at").html("Race 19: Mexico ");
-    $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-fi").removeClass("flag-icon-de").addClass("flag-icon-gb ");
-    $("#country-flag").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-mx ");
-    
-    $("#oon-gold-driver").html("Max Verstappen: ");
-    $("#oon-silver-driver").html("Kimi Raikkonen: ");
-    $("#oon-bronze-driver").html("Sebastian Vettel: ");
-
-    $("#in-his-stride-gold").show();
-    $("#in-his-stride-silver").show();
-    $("#in-his-stride-bronze").show();
-    $("#ihs-gold-driver").html("Lewis Hamilton: ");
-    $("#ihs-silver-driver").html("Daniel Ricciardo: ");
-    $("#ihs-bronze-driver").html("Sebastian Vettel: ");
-
-    $("#all-in-a-day-gold").hide();
-    $("#all-in-a-day-silver").hide();
-    $("#all-in-a-day-bronze").hide();
-    
+    set_champ_flag("flag-icon-gb");
+    set_sealed_at_flag("flag-icon-mx");
+    out_of_nowhere_driver_selector("Max Verstappen", "Kimi Raikkonen", "Sebastian Vettel");
+    in_his_stride_show_all();
+    in_his_stride_driver_selector("Lewis Hamilton", "Daniel Ricciardo", "Sebastian Vettel");
+    all_in_a_day_hide_all();
     $("#sd-driver").html("Kimi Raikkonen");
-    
     resolution_checker_and_div_animator("2018");
   });
-
-  //------------------------------------------------------Custom jQuery end
 }
+//------------------------------------------------------Custom jQuery end
 
 //********************************************************ALL INFO FUNCTION CALLS */
 
@@ -1183,6 +1008,110 @@ function say_hello(year) {
   return `Hello, ${year}!`;
 }
 
+//custom functions to de-clutter the jQuery button event listeners
+function set_champ_flag(flag) {
+  var germany = "flag-icon-de",
+      britain = "flag-icon-gb",
+      spain = "flag-icon-es",
+      finland = "flag-icon-fi";
+  switch(flag) {
+    case germany:
+      $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-gb").removeClass("flag-icon-es").addClass("flag-icon-de ");
+      break;
+    case britain:
+      $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-de").removeClass("flag-icon-es").addClass("flag-icon-gb ");
+      break;
+    case spain:
+      $("#champ-flag").removeClass("flag-icon-fi").removeClass("flag-icon-de").removeClass("flag-icon-gb").addClass("flag-icon-es ");
+      break;
+    case finland:
+      $("#champ-flag").removeClass("flag-icon-es").removeClass("flag-icon-de").removeClass("flag-icon-gb").addClass("flag-icon-fi ");
+  }
+}
+function set_sealed_at_flag(flag) {
+  var brazil = "flag-icon-br",
+      us = "flag-icon-us",
+      abu_dhabi = "flag-icon-ae",
+      japan = "flag-icon-jp",
+      india = "flag-icon-in",
+      mexico = "flag-icon-mx";
+  switch(flag) {
+    case brazil:
+      $("#country-flag").removeClass("flag-icon-mx").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-br ");
+      break;
+    case us:
+      $("#country-flag").removeClass("flag-icon-mx").removeClass("flag-icon-br").removeClass("flag-icon-ae").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-us ");
+      break;
+    case abu_dhabi:
+      $("#country-flag").removeClass("flag-icon-mx").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-jp").removeClass("flag-icon-in").addClass("flag-icon-ae ");
+      break;
+    case japan:
+      $("#country-flag").removeClass("flag-icon-mx").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-in").addClass("flag-icon-jp ");
+      break;
+    case india:
+      $("#country-flag").removeClass("flag-icon-mx").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").addClass("flag-icon-in ");
+      break;
+    case mexico:
+      $("#country-flag").removeClass("flag-icon-in").removeClass("flag-icon-br").removeClass("flag-icon-us").removeClass("flag-icon-ae").removeClass("flag-icon-jp").addClass("flag-icon-mx ");
+      break;
+  }
+}
+function out_of_nowhere_driver_selector(driver1, driver2, driver3) {
+  $("#oon-gold-driver").html(`${driver1}: `); 
+  $("#oon-silver-driver").html(`${driver2}: `); 
+  $("#oon-bronze-driver").html(`${driver3}: `); 
+}
+function in_his_stride_driver_selector(driver1, driver2, driver3) {
+  $("#ihs-gold-driver").html(`${driver1}: `);
+  $("#ihs-silver-driver").html(`${driver2}: `);
+  $("#ihs-bronze-driver").html(`${driver3}: `);
+  if(driver1 || driver2 || driver3 === "N/A") {
+    return 0;
+  }
+}
+function all_in_a_day_driver_selector(driver1, driver2, driver3) {
+  $("#aiad-gold-driver").html(`${driver1}: `);
+  $("#aiad-silver-driver").html(`${driver2}: `);
+  $("#aiad-bronze-driver").html(`${driver3}: `);
+  if(driver1 || driver2 || driver3 === "N/A") {
+    return 0;
+  }
+}
+function in_his_stride_show_all() {
+  $("#in-his-stride-gold").show();
+  $("#in-his-stride-silver").show();
+  $("#in-his-stride-bronze").show();
+}
+function in_his_stride_show_gold_only() {
+  $("#in-his-stride-gold").show();
+  $("#in-his-stride-silver").hide();
+  $("#in-his-stride-bronze").hide();
+}
+function in_his_stride_hide_bronze() {
+  $("#in-his-stride-gold").show();
+  $("#in-his-stride-silver").show();
+  $("#in-his-stride-bronze").hide();
+}
+function all_in_a_day_show_all() {
+  $("#all-in-a-day-gold").show();
+  $("#all-in-a-day-silver").show();
+  $("#all-in-a-day-bronze").show();
+}
+function all_in_a_day_show_gold_only() {
+  $("#all-in-a-day-gold").show();
+  $("#all-in-a-day-silver").hide();
+  $("#all-in-a-day-bronze").hide();
+}
+function all_in_a_day_hide_bronze() {
+  $("#all-in-a-day-gold").show();
+  $("#all-in-a-day-silver").show();
+  $("#all-in-a-day-bronze").hide();
+}
+function all_in_a_day_hide_all() {
+  $("#all-in-a-day-gold").hide();
+  $("#all-in-a-day-silver").hide();
+  $("#all-in-a-day-bronze").hide();
+}
 //determines current screen size and how to react to it
 function resolution_checker_and_div_animator(year) {
   if(window.matchMedia('(min-width: 1024px)').matches) {
@@ -1420,6 +1349,8 @@ function show_all_constructor_points(ndx) {
   } else {
     stackedChart = dc.barChart("#all-constructor-points");
     stackedChart
+      .turnOnControls(true)
+      .controlsUseVisibility(true)
       .width(width)
       .height(400)
       .dimension(dim)
@@ -1430,7 +1361,7 @@ function show_all_constructor_points(ndx) {
       .stack(renPoints, "Renault")
       .stack(mclPoints, "McLaren")
       .title(function(d) {
-        return "Hello!"; //<---------------------------------------------------RETURN ACTUAL INFO
+        return `Team scored ${d.value.total} points`;
       })
       .valueAccessor(function(d) {
         return d.value.total;
@@ -1693,6 +1624,9 @@ function show_points(ndx, season) {
       .stack(mclPoints, "McLaren")
       .stack(rbrPoints, "RBR")
       .stack(merPoints, "Mercedes")
+      .title(function(d) {
+        return `Driver scored ${d.value.total} points`;
+      })
       .valueAccessor(function(d) {
         if(d.total === 0) {
           return 0;
