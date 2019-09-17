@@ -1705,6 +1705,9 @@ function show_driver_world_champ_chart(ndx, season, driver) {
       .dimension(dim)
       .group(champGroup)
       .transitionDuration(1000)
+      .title(function(d) {
+        return `Scored ${d.value.total} points`;
+      })
       .valueAccessor(function(d) {
         return d.value.total;
       })
