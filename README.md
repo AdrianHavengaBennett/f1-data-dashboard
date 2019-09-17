@@ -4,6 +4,16 @@
 
 # UX
 
+## User Stories
+- As a user of this data dashboard, I would like to see how the different Formula One teams have got on since the departure of the V10 engines.
+- As a user of this data dashboard, it would be convenient to have a clear and easily digestable overview of each team's share in overall wins, pole positions, and fastest laps, as well as for any given season.
+- As a user of this data dashboard, I would like to be able to select a particular season in order to see how the different teams have scored season by season.
+- As a user of this data dashboard, I would like to see a reset button in order to quickly reset the infomation, knowing everything has indeed reset and I haven't left something filtered.
+- As a user of this data dashboard, I would like an overview of all the different race locations so that I could perhaps plan a visit to one of the circuits.
+- As a user of this data dashboard, I would like to know which driver won a particular season, and also when it was a mathematical certainty.
+- As a user of this data dashboard, I would like an overview of who achieved the fastest average speed in qualifying, and in the race, for the entire season.
+- As a user of this data dashboard, I would like to know which drivers achieved the most trifectas (pole position + fastest lap + win) throughout a particular season.
+
 ## Wireframe
 I used https://www.uxpin.com/ to help me with my wireframe.
 
@@ -12,7 +22,7 @@ I used https://www.uxpin.com/ to help me with my wireframe.
 ![Desktop & ipad Pro](https://adrianhavengabennett.github.io/f1-data-dashboard/images/wireframe/Desktop_ipad(pro)wireframe_2.JPG)
 
 ### Mobile
-![Mobile & ipad](https://adrianhavengabennett.github.io/f1-data-dashboard/images/wireframe/Mobile_ipad_wireframe_1.JPG)
+![Mobile & ipad](https://adrianhavengabennett.github.io/f1-data-dashboard/images/wireframe/Mobile_ipad_wireframe_1.JPG) 
 ![Mobile & ipad](https://adrianhavengabennett.github.io/f1-data-dashboard/images/wireframe/Mobile_ipad_wireframe_2.JPG)
 ![Mobile & ipad](https://adrianhavengabennett.github.io/f1-data-dashboard/images/wireframe/Mobile_ipad_wireframe_3.JPG)
 
@@ -20,8 +30,19 @@ I used https://www.uxpin.com/ to help me with my wireframe.
 ## Features
 
 ### - Existing features
+- A map, showing all the race locations since 2006, with each location clickable to reveal some tooltip infomation.
+- Easily distinguishable buttons to jump from season to season and back to the initial home page.
+- A reset button on the bar charts to ensure you're always able to return to the initial information.
+- The layout of the dashboard will change depending on whether you're viewing all seasons' information or specific season information.
+- The race locations, within the map, are clickable and reveal tooltip information.
+- The charts are responsive with one another through the help of Crossfilter.
+- The dashboard is developed with responsive design in mind and will change depending on screen size.
+- On mobiles and iPads (not iPad Pro), the navigation bar can be toggled on and off.
+- Clicking the question marks reveal a tooltip and change to an exit icon, which, when clicked, removes the tooltip and changes back to a question mark.
 
 ### - Features left to implement
+
+There are currently no features left to implement as the project is completed to the expectation of what it was designed for (student project).
 
 ## Technologies Used
 
@@ -55,6 +76,18 @@ Technologies used in this project:
 - http://bl.ocks.org/mapsam/6090056
 
 ## Testing
+
+### User Testing
+The following test cases have been performed to test funtionality:
+- Using the buttons to navigate through the seasons | Expected behaviour = the different data loads and the layout changes | Pass
+- Changing viewport to landscape | Expected behaviour = content fills the landscape view and charts respond according to responsive design | Pass
+- Clicking question marks | Expected behaviour = reveal a tooltip and change to an exit icon, which, when clicked, removes the tooltip and changes back to a question mark | Pass
+- Hovering over the buttons | Expected behaviour = buttons tilt slightly and change color | Pass
+- HTML validated via https://validator.w3.org/ - Pass
+- CSS validated via https://jigsaw.w3.org/css-validator/ - Pass
+
+### Jasmine Testing
+- #TODO - testing JS functions with Jasmine
 
 ## Deployment
 For this project, I have used Github Pages to deploy and host the application.
