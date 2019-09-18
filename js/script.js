@@ -1,4 +1,4 @@
-//------------------------------------------------------GeoJSON Map Start
+//********************************************************GeoJSON Map Start
 var myGeoJSONPath = 'data/map.json';
 var myCustomStyle = {
   stroke: false,
@@ -492,9 +492,9 @@ $.getJSON(myGeoJSONPath, function(data) {
       style: myCustomStyle
   }).addTo(map);
 })
-//------------------------------------------------------GeoJSON Map End
+//********************************************************GeoJSON Map End
 
-//------------------------------------------------------D3/DC/Crossfilter Graphs/Charts/Numbers Start
+//********************************************************D3/DC/Crossfilter Graphs/Charts/Numbers Start
 
 //wait for data to load
 queue()
@@ -516,20 +516,24 @@ function makeGraphs(error, data) {
     d.fast_lap_time = parseInt(d.fast_lap_time);
     d.avg_fast_lap_speed = parseInt(d.avg_fast_lap_speed);
   });
-
+  
+  //initial data upon page load
   show_all_info(ndx);
 
-  //------------------------------------------------------Custom jQuery start
+  //********************************************************Custom jQuery start
   
+  //smaller screens nav toggle
   $("#nav-toggle").click(function() {
     $(".nav-buttons").slideToggle(500, "swing");
   });
 
+  //tooltip
   $(".fa-question-circle").click(function() {
     $(this).children(".info").toggle();
     $(this).css("class", "info-icon").toggleClass("fa-question-circle").toggleClass("fa-times");
   });
-
+  
+  //********************************************************buttons - jQuery event listeners start
   d3.select("#all-seasons").on("click.foo", function() {
     //prevents the anchor tags, once clicked, from jumping to the top of the screen
     event.preventDefault(); 
@@ -753,8 +757,9 @@ function makeGraphs(error, data) {
     $("#sd-driver").html("Kimi Raikkonen");
     resolution_checker_and_div_animator("2018");
   });
+  //********************************************************buttons - jQuery event listeners end
 }
-//------------------------------------------------------Custom jQuery end
+  //********************************************************Custom jQuery end
 
 //********************************************************ALL INFO FUNCTION CALLS */
 

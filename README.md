@@ -2,6 +2,9 @@
 
 ### Welcome to my F1 data dashboard!
 
+Calling all F1 fans! 
+This dashboard was put together for The Code Institute as my second milestone project (Interactive FrontEnd Development Milestone Project), which focuses on interactivity with Javascript and jQuery, as well as HTML5, CSS, and Bootstrap 4. Enjoy!
+
 # UX
 
 ## User Stories
@@ -80,14 +83,13 @@ Technologies used in this project:
 ### User Testing
 The following test cases have been performed to test funtionality:
 - Using the buttons to navigate through the seasons | Expected behaviour = the different data loads and the layout changes | Pass
-- Changing viewport to landscape | Expected behaviour = content fills the landscape view and charts respond according to responsive design | Pass
+- Changing viewport to landscape and/or changing the screen resolution | Expected behaviour = content fills the landscape view and charts respond according to responsive design | Pass
 - Clicking question marks | Expected behaviour = reveal a tooltip and change to an exit icon, which, when clicked, removes the tooltip and changes back to a question mark | Pass
 - Hovering over the buttons | Expected behaviour = buttons tilt slightly and change color | Pass
+- Clicking sections of charts connected via Crossfilter | Expected behaviour = charts filter together accordingly | Pass
+- Clicking any specific season button | Expected behaviour = flags change to respective driver champion and country trophy sealed at | Pass
 - HTML validated via https://validator.w3.org/ - Pass
 - CSS validated via https://jigsaw.w3.org/css-validator/ - Pass
-
-### Jasmine Testing
-- #TODO - testing JS functions with Jasmine
 
 ## Deployment
 For this project, I have used Github Pages to deploy and host the application.
