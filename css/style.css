@@ -379,7 +379,7 @@ table {
   position: relative;
 }
 
-.info {
+.info, .info_2 {
     position: absolute;
     display: none;
     border: 1px solid #3D3D3D;
@@ -392,6 +392,11 @@ table {
     left: -11.75em;
     top: -2.75em;
     padding: 4px;
+}
+
+.info_2 {
+  width: 25em;
+  left: -24.75em;
 }
 
 /*-----------------------------------------------------------Media Queries*/

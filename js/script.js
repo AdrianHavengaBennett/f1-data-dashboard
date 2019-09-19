@@ -530,6 +530,7 @@ function makeGraphs(error, data) {
   //tooltip
   $(".fa-question-circle").click(function() {
     $(this).children(".info").toggle();
+    $(this).children(".info_2").toggle();
     $(this).css("class", "info-icon").toggleClass("fa-question-circle").toggleClass("fa-times");
   });
   
