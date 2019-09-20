@@ -9,7 +9,8 @@ This dashboard was put together for The Code Institute as my second milestone pr
 
 ## User Stories
 - As a user of this data dashboard, I would like to see how the different Formula One teams have got on since the departure of the V10 engines.
-- As a user of this data dashboard, it would be convenient to have a clear and easily digestable overview of each team's share in overall wins, pole positions, and fastest laps, as well as for any given season.
+- As a user of this data dashboard, it would be useful for me to be able to reload the dashboard from within the project (header), instead of from the browser.
+- As a user of this data dashboard, it would be convenient for me to have a clear and easily digestable overview of each team's share in overall wins, pole positions, and fastest laps, as well as for any given season.
 - As a user of this data dashboard, I would like to be able to select a particular season in order to see how the different teams have scored season by season.
 - As a user of this data dashboard, I would like to see a reset button in order to quickly reset the infomation, knowing everything has indeed reset and I haven't left something filtered.
 - As a user of this data dashboard, I would like an overview of all the different race locations so that I could perhaps plan a visit to one of the circuits.
