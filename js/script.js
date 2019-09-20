@@ -544,7 +544,6 @@ function makeGraphs(error, data) {
     if(window.matchMedia('(min-width: 1024px)').matches) {
       $(".section-bg").animate({ left: "0%" }, 1000);
       $(".specific-bg-color").css("z-index", "-1").animate({ right: "0%" }, 1000);
-      console.log(say_hello("All"));
     } else {
       $(".specific-bg-color").css("position", "absolute");
     }
@@ -565,7 +564,7 @@ function makeGraphs(error, data) {
     all_in_a_day_hide_bronze();
     all_in_a_day_driver_selector("Michael Schumacher", "Fernando Alonso", "N/A");
     $("#sd-driver").html("Kimi Raikkonen");
-    resolution_checker_and_div_animator("2006");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-07").on("click.foo", function() {
@@ -581,7 +580,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_all();
     all_in_a_day_driver_selector("Fernando Alonso", "Felipe Massa", "Lewis Hamilton");
     $("#sd-driver").html("Kimi Raikkonen");
-    resolution_checker_and_div_animator("2007");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-08").on("click.foo", function() {
@@ -597,7 +596,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_all();
     all_in_a_day_driver_selector("Felipe Massa", "Lewis Hamilton", "Kimi Raikkonen");
     $("#sd-driver").html("Heikki Kovalainen");
-    resolution_checker_and_div_animator("2008");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-09").on("click.foo", function() {
@@ -613,7 +612,7 @@ function makeGraphs(error, data) {
     all_in_a_day_hide_bronze();
     all_in_a_day_driver_selector("Jenson Button", "Sebastian Vettel", "N/A");
     $("#sd-driver").html("Sebastian Vettel");
-    resolution_checker_and_div_animator("2009");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-10").on("click.foo", function() {
@@ -629,7 +628,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_gold_only();
     all_in_a_day_driver_selector("Fernando Alonso", "N/A", "N/A");
     $("#sd-driver").html("Fernando Alonso: ");
-    resolution_checker_and_div_animator("2010");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-11").on("click.foo", function() {
@@ -645,7 +644,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_gold_only();
     all_in_a_day_driver_selector("Sebastian Vettel", "N/A", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    resolution_checker_and_div_animator("2011");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-12").on("click.foo", function() {
@@ -661,7 +660,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_gold_only();
     all_in_a_day_driver_selector("Sebastian Vettel", "N/A", "N/A");
     $("#sd-driver").html("Jenson Button");
-    resolution_checker_and_div_animator("2012");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-13").on("click.foo", function() {
@@ -677,7 +676,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_gold_only();
     all_in_a_day_driver_selector("Sebastian Vettel", "N/A", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    resolution_checker_and_div_animator("2013");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-14").on("click.foo", function() {
@@ -693,7 +692,7 @@ function makeGraphs(error, data) {
     all_in_a_day_show_gold_only();
     all_in_a_day_driver_selector("Lewis Hamilton", "N/A", "N/A");
     $("#sd-driver").html("Nico Rosberg");
-    resolution_checker_and_div_animator("2014");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-15").on("click.foo", function() {
@@ -709,7 +708,7 @@ function makeGraphs(error, data) {
     all_in_a_day_hide_bronze();
     all_in_a_day_driver_selector("Lewis Hamilton", "Nico Rosberg", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    resolution_checker_and_div_animator("2015");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-16").on("click.foo", function() {
@@ -725,7 +724,7 @@ function makeGraphs(error, data) {
     all_in_a_day_hide_bronze();
     all_in_a_day_driver_selector("Nico Rosberg", "Lewis Hamilton", "N/A");
     $("#sd-driver").html("Lewis Hamilton");
-    resolution_checker_and_div_animator("2016");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-17").on("click.foo", function() {
@@ -741,7 +740,7 @@ function makeGraphs(error, data) {
     all_in_a_day_hide_bronze();
     all_in_a_day_driver_selector("Lewis Hamilton", "Valtteri Bottas", "N/A");
     $("#sd-driver").html("Valtteri Bottas");
-    resolution_checker_and_div_animator("2017");
+    resolution_checker_and_div_animator();
   });
 
   d3.select("#s-18").on("click.foo", function() {
@@ -756,7 +755,7 @@ function makeGraphs(error, data) {
     in_his_stride_driver_selector("Lewis Hamilton", "Daniel Ricciardo", "Sebastian Vettel");
     all_in_a_day_hide_all();
     $("#sd-driver").html("Kimi Raikkonen");
-    resolution_checker_and_div_animator("2018");
+    resolution_checker_and_div_animator();
   });
   //********************************************************buttons - jQuery event listeners end
 }
@@ -1009,11 +1008,6 @@ function show_18_info(ndx) {
   show_fast_lap_speed_demon(ndx, "18", "Kimi Raikkonen", "#sd-fast-laps");
 }
 
-//silly greeting on jquery buttons to confirm the event has been triggered
-function say_hello(year) {
-  return `Hello, ${year}!`;
-}
-
 //custom functions to de-clutter the jQuery button event listeners
 function set_champ_flag(flag) {
   var germany = "flag-icon-de",
@@ -1119,14 +1113,14 @@ function all_in_a_day_hide_all() {
   $("#all-in-a-day-bronze").hide();
 }
 //determines current screen size and how to react to it
-function resolution_checker_and_div_animator(year) {
+function resolution_checker_and_div_animator() {
   if(window.matchMedia('(min-width: 1024px)').matches) {
     $(".section-bg").animate({ left: "-22%" }, 1000);
+                                                            //ensures the div's contents are clickable (tooltip) when animation has finished
     $(".specific-bg-color").animate({ right: "-50%" }, 1000).queue(function(next) {
                                                                     $(this).css("z-index", "0");
                                                                     next();
                                                                   });
-    console.log(say_hello(year)); 
   } else {
     $(".specific-bg-color").css("position", "unset");
   }
