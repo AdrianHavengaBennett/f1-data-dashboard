@@ -1,4 +1,4 @@
-# Formula One - Success After V10
+# [Formula One - Success After V10](https://adrianhavengabennett.github.io/f1-data-dashboard/)
 
 ### Welcome to my F1 data dashboard!
 
@@ -36,6 +36,7 @@ I used https://www.uxpin.com/ to help me with my wireframe.
 - A map, showing all the race locations since 2006, with each location clickable to reveal some tooltip infomation.
 - Easily distinguishable buttons to jump from season to season and back to the initial home page.
 - A reset button on the bar charts to ensure you're always able to return to the initial information.
+- Clicking "Formula One" in page heading will reload the entire dashboard.
 - The layout of the dashboard will change depending on whether you're viewing all seasons' information or specific season information.
 - The race locations, within the map, are clickable and reveal tooltip information.
 - The charts are responsive with one another through the help of Crossfilter.
@@ -83,6 +84,7 @@ Technologies used in this project:
 ### User Testing
 The following test cases have been performed to test funtionality:
 - Using the buttons to navigate through the seasons | Expected behaviour = the different data loads and the layout changes | Pass
+- Clicking "Formula One" in page heading | Expected behaviour = page will reload | Pass
 - Changing viewport to landscape and/or changing the screen resolution | Expected behaviour = content fills the landscape view and charts respond according to responsive design | Pass
 - Clicking question marks | Expected behaviour = reveal a tooltip and change to an exit icon, which, when clicked, removes the tooltip and changes back to a question mark | Pass
 - Hovering over the buttons | Expected behaviour = buttons tilt slightly and change color | Pass
